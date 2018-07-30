@@ -39,13 +39,22 @@ void    fill_key(t_info *info)
 void    print(t_info *info)
 {
     t_flags *tmp;
+    int     flag;
 
+    flag = info->flags;
     tmp = info->new_flags;
     while (tmp)
     {
         if (tmp->key == 'p')
-            md5_algo(info, "");
+        {
+            read_screen(info, 1);
+            info->flags = (info->flags | 2);
+        }
         tmp = tmp->next;
+    }
+    if ((info->flags & 1) == 1 || (flag & 2) == 2)
+    {
+        read_screen(info, 0);
     }
 }
 
@@ -85,20 +94,18 @@ void    fill_content(int argc, const char *argv[], t_info *info)
 
     if ((info->flags & 8) == 8 || (info->flags & 16) == 16)
     {
-        new_print(info, info->new_flags);
+        // START WORK HERE
+        printf("start work HERE");
+//        new_print(info, info->new_flags);
     }
     else
     {
-        if (info->flags == 4)
-            read_screen(info, 1);
-        else if ((info->flags & 4) == 4) {
-            read_screen(info, 1); //active read stdin
-            print(info);
-        }
-        else
+        if (info->flags < 4)
         {
-            info->flags = 2;
+            info->flags = (info->flags | 2);
             read_screen(info, 0);
         }
+        else
+            print(info);
     }
 }

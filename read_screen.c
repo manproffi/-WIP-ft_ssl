@@ -18,27 +18,25 @@ void	read_screen(t_info *info, int flag_p)
     char    *input_str;
     char    *tmp;
     size_t  i;
+    static  int counter = 0;
 
     input_str = (char*)malloc(sizeof(char) * 1);
     input_str[0] = '\0';
-    while ((i = read(0, &buffer, 100)) > 0)
+    if (!counter++)
     {
-        buffer[i] = '\0';
-        tmp = input_str;
-        input_str = ft_strjoin(tmp,buffer);
-        ft_strdel(&tmp);
+        while ((i = read(0, &buffer, 100)) > 0)
+        {
+            buffer[i] = '\0';
+            tmp = input_str;
+            input_str = ft_strjoin(tmp,buffer);
+            ft_strdel(&tmp);
+        }
     }
+    else
+        input_str = ft_strdup("");
+
     if (flag_p)
-    {
         printf("%s", input_str);
-//        if (input_str[ft_strlen(input_str) - 1] == '\n') {
-//            tmp = ft_strdup(input_str);
-//            tmp[ft_strlen(input_str) - 1] = '\0';
-//            printf("%s\n", tmp);
-//        }
-//        else
-//            printf("%s\n", input_str);
-    }
     md5_algo(info, input_str);
     ft_strdel(&input_str);
 }
