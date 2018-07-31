@@ -20,6 +20,7 @@ void	initialization_info(t_info *info)
     info->new_flags = NULL;
     info->keys = 0;
     info->n = 0;
+    info->validation_flag = 1;
 
     info->a = 0x67452301;
     info->b = 0xEFCDAB89;

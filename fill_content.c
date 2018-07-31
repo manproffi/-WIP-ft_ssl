@@ -58,28 +58,26 @@ void    print(t_info *info)
     }
 }
 
-void    new_print(t_info *info, t_flags *tmp)
+void    print_without_stdin(t_info *info)
 {
-    int     block;
+    t_flags  *tmp;
 
-    info->flags = 0;
-    block = 0;
+    tmp = info->new_flags;
     while (tmp)
     {
-        info->flags = (tmp->key == 'r') ? (info->flags | 1) : (info->flags);
-        info->flags = (tmp->key == 'q') ? (info->flags | 2) : (info->flags);
+//        printf("***%c %s\n", tmp->key, tmp->content);
         if (tmp->key == 'p')
-        {
-            if (block == 0)
-            {
-                read_screen(info, 1);
-                block = 1;
-            }
-            else
-                md5_algo(info, tmp->content);
-        }
+            read_screen(info, 1);
         else if (tmp->key == 's')
-            md5_algo(info, tmp->content);
+            md5_algo(info, tmp->content, "");
+        else if (tmp->key == 'f')
+        {
+            info->flags = (info->flags | 32);
+            info->validation_flag = 0;
+            read_file(info, tmp->content);
+//          md5_algo(info, tmp->content);
+        }
+
         tmp = tmp->next;
     }
 }
@@ -95,8 +93,8 @@ void    fill_content(int argc, const char *argv[], t_info *info)
     if ((info->flags & 8) == 8 || (info->flags & 16) == 16)
     {
         // START WORK HERE
-        printf("start work HERE");
-//        new_print(info, info->new_flags);
+//        printf("start work HERE");
+        print_without_stdin(info);
     }
     else
     {

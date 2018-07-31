@@ -36,7 +36,7 @@ unsigned int rev_bit(unsigned int a)
 }
 
 
-void    md5_algo(t_info *info, const char *string)
+void    md5_algo(t_info *info, const char *string, const char *filename)
 {
 //    printf("*****  start md5_algo *****\n");
 //    printf("%s\n", string);
@@ -148,7 +148,7 @@ void    md5_algo(t_info *info, const char *string)
 
 //    printf("%.8x%.8x%.8x%.8x\n", rev_bit(a), rev_bit(b), rev_bit(c), rev_bit(d));
 //    sleep(2);
-    print_result(info, string);
+    print_result(info, string, filename);
 
 
 

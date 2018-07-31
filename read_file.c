@@ -13,7 +13,7 @@
 
 #include "head_ssl.h"
 
-void    read_file_last(t_info *info, int fd)
+void    read_file_last(t_info *info, int fd, const char *filename)
 {
     char	buffer[101];
     char    *input_str;
@@ -30,7 +30,7 @@ void    read_file_last(t_info *info, int fd)
         ft_strdel(&tmp);
     }
 //    printf("%s\n", input_str);
-    md5_algo(info, input_str);
+    md5_algo(info, input_str, filename);
     ft_strdel(&input_str);
 }
 
@@ -46,7 +46,8 @@ void   read_file_next(t_info *info, const char *name)
         perror(error);
         ft_strdel(&error);
     }
-    read_file_last(info, fd);
+    if (info->validation_flag == 0)
+        read_file_last(info, fd, name);
 
     close(fd);
 }
