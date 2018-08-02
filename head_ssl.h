@@ -56,6 +56,7 @@ typedef struct 		s_info
 	int				argc_count;
     int             validation_flag;
 
+
     size_t          n;
     unsigned int    **mass;
 

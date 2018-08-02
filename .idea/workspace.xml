@@ -15,13 +15,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/fill_content.c" afterPath="$PROJECT_DIR$/fill_content.c" />
       <change beforePath="$PROJECT_DIR$/head_ssl.h" afterPath="$PROJECT_DIR$/head_ssl.h" />
-      <change beforePath="$PROJECT_DIR$/main.c" afterPath="$PROJECT_DIR$/main.c" />
-      <change beforePath="$PROJECT_DIR$/md5_algo.c" afterPath="$PROJECT_DIR$/md5_algo.c" />
-      <change beforePath="$PROJECT_DIR$/myfile" afterPath="$PROJECT_DIR$/myfile" />
       <change beforePath="$PROJECT_DIR$/print_result.c" afterPath="$PROJECT_DIR$/print_result.c" />
-      <change beforePath="$PROJECT_DIR$/read_file.c" afterPath="$PROJECT_DIR$/read_file.c" />
-      <change beforePath="$PROJECT_DIR$/read_screen.c" afterPath="$PROJECT_DIR$/read_screen.c" />
-      <change beforePath="$PROJECT_DIR$/stfile" afterPath="$PROJECT_DIR$/stfile" />
+      <change beforePath="$PROJECT_DIR$/s_diff.sh" afterPath="$PROJECT_DIR$/s_diff.sh" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,41 +41,31 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="parsing_command.c" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/parsing_command.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1305">
-                  <caret line="87" column="33" lean-forward="false" selection-start-line="87" selection-start-column="33" selection-end-line="87" selection-end-column="33" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="control_s_flags.c" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/control_s_flags.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="735">
-                  <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="pre_parsing_flags.c" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pre_parsing_flags.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-194">
-                  <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+                <state relative-caret-position="75">
+                  <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="fill_content.c" pinned="false" current-in-tab="false">
+          <file leaf-file-name="fill_content.c" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/fill_content.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1122">
-                  <caret line="77" column="41" lean-forward="false" selection-start-line="77" selection-start-column="41" selection-end-line="77" selection-end-column="41" />
+                <state relative-caret-position="457">
+                  <caret line="80" column="26" lean-forward="false" selection-start-line="80" selection-start-column="26" selection-end-line="80" selection-end-column="26" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="md5_algo.c" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/md5_algo.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="942">
+                  <caret line="150" column="39" lean-forward="false" selection-start-line="150" selection-start-column="31" selection-end-line="150" selection-end-column="39" />
                   <folding />
                 </state>
               </provider>
@@ -89,7 +74,7 @@
           <file leaf-file-name="read_file.c" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/read_file.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="690">
+                <state relative-caret-position="-6">
                   <caret line="46" column="26" lean-forward="false" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
                   <folding />
                 </state>
@@ -99,7 +84,7 @@
           <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="954">
+                <state relative-caret-position="1290">
                   <caret line="86" column="22" lean-forward="false" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
                   <folding />
                 </state>
@@ -116,11 +101,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="print_result.c" pinned="false" current-in-tab="true">
+          <file leaf-file-name="print_result.c" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/print_result.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="795">
-                  <caret line="53" column="23" lean-forward="false" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
+                <state relative-caret-position="300">
+                  <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -133,7 +118,7 @@
           <file leaf-file-name="start_work_with_md5.c" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/start_work_with_md5.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="264">
+                <state relative-caret-position="360">
                   <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
                   <folding />
                 </state>
@@ -153,8 +138,8 @@
           <file leaf-file-name="head_ssl.h" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/head_ssl.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="69">
-                  <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+                <state relative-caret-position="703">
+                  <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
                   <folding>
                     <element signature="e#1010#1027#0" expanded="true" />
                   </folding>
@@ -193,14 +178,14 @@
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/Makefile" />
         <option value="$PROJECT_DIR$/start_work_with_md5.c" />
-        <option value="$PROJECT_DIR$/main.c" />
         <option value="$PROJECT_DIR$/md5_algo.c" />
-        <option value="$PROJECT_DIR$/fill_content.c" />
         <option value="$PROJECT_DIR$/read_screen.c" />
         <option value="$PROJECT_DIR$/read_file.c" />
-        <option value="$PROJECT_DIR$/head_ssl.h" />
         <option value="$PROJECT_DIR$/control_s_flags.c" />
         <option value="$PROJECT_DIR$/print_result.c" />
+        <option value="$PROJECT_DIR$/main.c" />
+        <option value="$PROJECT_DIR$/head_ssl.h" />
+        <option value="$PROJECT_DIR$/fill_content.c" />
       </list>
     </option>
   </component>
@@ -297,11 +282,12 @@
       <workItem from="1532856411125" duration="17027000" />
       <workItem from="1532970587260" duration="1552000" />
       <workItem from="1533051517127" duration="3524000" />
+      <workItem from="1533229720726" duration="3001000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69068000" />
+    <option name="totallyTimeSpent" value="72069000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
@@ -595,17 +581,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="954">
+        <state relative-caret-position="1290">
           <caret line="86" column="22" lean-forward="false" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
           <folding />
         </state>
@@ -613,7 +591,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/start_work_with_md5.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
+        <state relative-caret-position="360">
           <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
@@ -627,16 +605,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/head_ssl.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding>
-            <element signature="e#1010#1027#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Makefile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -645,17 +613,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fill_content.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="77" column="41" lean-forward="false" selection-start-line="77" selection-start-column="41" selection-end-line="77" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/md5_algo.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2250">
+        <state relative-caret-position="942">
           <caret line="150" column="39" lean-forward="false" selection-start-line="150" selection-start-column="31" selection-end-line="150" selection-end-column="39" />
           <folding />
         </state>
@@ -663,7 +623,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/read_file.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
+        <state relative-caret-position="-6">
           <caret line="46" column="26" lean-forward="false" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
           <folding />
         </state>
@@ -679,24 +639,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/parsing_command.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1305">
+        <state relative-caret-position="954">
           <caret line="87" column="33" lean-forward="false" selection-start-line="87" selection-start-column="33" selection-end-line="87" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pre_parsing_flags.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-194">
-          <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/print_result.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="53" column="23" lean-forward="false" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
+        <state relative-caret-position="300">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/head_ssl.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding>
+            <element signature="e#1010#1027#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pre_parsing_flags.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fill_content.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="80" column="26" lean-forward="false" selection-start-line="80" selection-start-column="26" selection-end-line="80" selection-end-column="26" />
           <folding />
         </state>
       </provider>

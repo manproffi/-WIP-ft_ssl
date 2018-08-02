@@ -45,7 +45,7 @@ void    print_result(t_info * info, const char *str, const char *filename)
         if ((info->flags & 32) == 32)
         {
             printf("MD5 (%s) = %.8x%.8x%.8x%.8x\n", filename, rev_bit(info->a), rev_bit(info->b), rev_bit(info->c), rev_bit(info->d));
-            info->flags = info->flags | ~32;
+            info->flags &= ~32;
         }
         else
             printf("MD5 (\"%s\") = %.8x%.8x%.8x%.8x\n", str, rev_bit(info->a), rev_bit(info->b), rev_bit(info->c), rev_bit(info->d));

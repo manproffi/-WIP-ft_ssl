@@ -1,100 +1,101 @@
 #!/bin/bash
 
-echo "*** 1 -s hello ***"
+echo "*** 1 file ***"
 
-agrument="-s hello" 
-
-echo $1 | md5 $agrument > stfile
-echo $1 | ./ft_ssl md5 $agrument > myfile
-
-diff -y stfile myfile
-
-echo "*** 2 -s hello -s hello ***"
-
-agrument="-s hello -s hello" 
+agrument="file" 
 
 echo $1 | md5 $agrument > stfile
 echo $1 | ./ft_ssl md5 $agrument > myfile
 
 diff -y stfile myfile
 
-echo "*** 3 -rs hello ***"
+echo "*** 2 -q file ***"
 
-agrument="-rs hello" 
-
-echo $1 | md5 $agrument > stfile
-echo $1 | ./ft_ssl md5 $agrument > myfile
-
-diff -y stfile myfile
-
-echo "*** 4 -qs hello ***"
-
-agrument="-qs hello" 
+agrument="-q file" 
 
 echo $1 | md5 $agrument > stfile
 echo $1 | ./ft_ssl md5 $agrument > myfile
 
 diff -y stfile myfile
 
-echo "*** 5 -rqs hello ***"
+echo "*** 3 -r file ***"
 
-agrument="-rqs hello" 
-
-echo $1 | md5 $agrument > stfile
-echo $1 | ./ft_ssl md5 $agrument > myfile
-
-diff -y stfile myfile
-
-echo "*** 6 -s -p hello ***"
-
-agrument="-s -p hello" 
+agrument="-r file" 
 
 echo $1 | md5 $agrument > stfile
 echo $1 | ./ft_ssl md5 $agrument > myfile
 
 diff -y stfile myfile
 
-echo "*** 7 -rs -p -sr hello ***"
+echo "*** 4 -rq file ***"
 
-agrument="-rs -p -sr hello" 
-
-echo $1 | md5 $agrument > stfile
-echo $1 | ./ft_ssl md5 $agrument > myfile
-
-diff -y stfile myfile
-
-echo "*** 8 -qr -p -s hello ***"
-
-agrument="-qr -p -s hello" 
+agrument="-rq file" 
 
 echo $1 | md5 $agrument > stfile
 echo $1 | ./ft_ssl md5 $agrument > myfile
 
 diff -y stfile myfile
 
-echo "*** 9 -qr -p file -s hello ***"
+echo "*** 5 file hello***"
 
-agrument="-qr -p file -s hello" 
-
-echo $1 | md5 $agrument > stfile
-echo $1 | ./ft_ssl md5 $agrument > myfile
-
-diff -y stfile myfile
-
-echo "*** 10 -qr -ppshello file ***"
-
-agrument="-qr -ppshello file" 
+agrument="file hello" 
 
 echo $1 | md5 $agrument > stfile
 echo $1 | ./ft_ssl md5 $agrument > myfile
 
 diff -y stfile myfile
 
-echo "*** 10 -ppshello file ***"
+echo "*** 6 -r file hello***"
 
-agrument=" -ppshello file" 
+agrument="-r file hello" 
 
 echo $1 | md5 $agrument > stfile
 echo $1 | ./ft_ssl md5 $agrument > myfile
 
 diff -y stfile myfile
+
+echo "*** 7 -q file hello***"
+
+agrument="-q file hello" 
+
+echo $1 | md5 $agrument > stfile
+echo $1 | ./ft_ssl md5 $agrument > myfile
+
+diff -y stfile myfile
+
+echo "*** 8 -qr file hello***"
+
+agrument="-qr file hello" 
+
+echo $1 | md5 $agrument > stfile
+echo $1 | ./ft_ssl md5 $agrument > myfile
+
+diff -y stfile myfile
+
+echo "*** 9 -p -qr file hello***"
+
+agrument="-p -qr file hello" 
+
+echo $1 | md5 $agrument > stfile
+echo $1 | ./ft_ssl md5 $agrument > myfile
+
+diff -y stfile myfile
+
+echo "*** 10 -p -p -qr file hello***"
+
+agrument="-p -p -qr file hello" 
+
+echo $1 | md5 $agrument > stfile
+echo $1 | ./ft_ssl md5 $agrument > myfile
+
+diff -y stfile myfile
+
+echo "*** 11 -s hello -p -p -qr file hello***"
+
+agrument="-s hello -p -p -qr file hello" 
+
+echo $1 | md5 $agrument > stfile
+echo $1 | ./ft_ssl md5 $agrument > myfile
+
+diff -y stfile myfile
+

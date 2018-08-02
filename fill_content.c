@@ -61,23 +61,33 @@ void    print(t_info *info)
 void    print_without_stdin(t_info *info)
 {
     t_flags  *tmp;
+    int     s_tmp;
+    int     flag_s;
 
+    flag_s = 0;
     tmp = info->new_flags;
     while (tmp)
     {
 //        printf("***%c %s\n", tmp->key, tmp->content);
+        flag_s = tmp->key == 'r' ? (flag_s | 1) : flag_s;
+        flag_s = tmp->key == 'q' ? (flag_s | 2) : flag_s;
+
         if (tmp->key == 'p')
             read_screen(info, 1);
         else if (tmp->key == 's')
+        {
+//            info->flags = (info->flags | 64);
+            s_tmp = info->flags;
+            info->flags = flag_s;
             md5_algo(info, tmp->content, "");
+            info->flags = s_tmp;
+        }
         else if (tmp->key == 'f')
         {
             info->flags = (info->flags | 32);
             info->validation_flag = 0;
             read_file(info, tmp->content);
-//          md5_algo(info, tmp->content);
         }
-
         tmp = tmp->next;
     }
 }
