@@ -12,6 +12,22 @@
 
 #include "head_ssl.h"
 
+
+void   delete_mass(t_info *info)
+{
+    size_t     i;
+
+    i = 0;
+    while (i < info->n)
+    {
+        free(info->mass[i]);
+        ++i;
+    }
+    free(info->mass);
+    info->mass = NULL;
+}
+
+
 void    initialization_t(t_info *info)
 {
     size_t      i;
@@ -39,10 +55,11 @@ unsigned int rev_bit(unsigned int a)
 void    md5_algo(t_info *info, const char *string, const char *filename)
 {
 //    printf("*****  start md5_algo *****\n");
-//    printf("%s\n", string);
+//    printf("%s %s\n", string, filename);
 //    (void)info;
 
     append_padding_bits(info, string);
+//    system("leaks ft_ssl -q");
     initialization_t(info);
 
 
@@ -148,7 +165,10 @@ void    md5_algo(t_info *info, const char *string, const char *filename)
 
 //    printf("%.8x%.8x%.8x%.8x\n", rev_bit(a), rev_bit(b), rev_bit(c), rev_bit(d));
 //    sleep(2);
+//    system("leaks ft_ssl -q");
     print_result(info, string, filename);
+    delete_mass(info);
+
 
 
 

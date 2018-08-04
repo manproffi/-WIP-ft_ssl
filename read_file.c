@@ -32,6 +32,7 @@ void    read_file_last(t_info *info, int fd, const char *filename)
 //    printf("%s\n", input_str);
     md5_algo(info, input_str, filename);
     ft_strdel(&input_str);
+//    system("leaks ft_ssl -q");
 }
 
 void   read_file_next(t_info *info, const char *name)
@@ -95,6 +96,7 @@ void    read_file(t_info *info, const char *name)
             printf("ft_ssl: %s: Is a directory\n", name);
         else
             read_file_next(info, res);
+//        printf("%p", res);
         ft_strdel(&res);
     }
     else
@@ -103,4 +105,5 @@ void    read_file(t_info *info, const char *name)
         perror(error);
         ft_strdel(&error);
     }
+//    system("leaks ft_ssl -q");
 }

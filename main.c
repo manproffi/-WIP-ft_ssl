@@ -16,6 +16,7 @@ void	initialization_info(t_info *info)
 {
 	info->flags = 0;
 	info->argc_count = 1;
+    info->mass = NULL;
 
     info->new_flags = NULL;
     info->keys = 0;
@@ -45,5 +46,6 @@ int main(int argc, char const *argv[])
         printf("ft_ssl: Error: '%s' is an invalid command.\n", argv[1]);
         printf("Message Digest commands:\nmd5\nsha256\n");
     }
+//    system("leaks ft_ssl -q");
 	return 0;
 }

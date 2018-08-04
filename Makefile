@@ -28,7 +28,7 @@ SRC = main.c parsing_command.c  start_work_with_md5.c start_work_with_sha256.c \
  
 OBJ = $(SRC:.c=.o)
 
-FLAG = -Wall -Wextra -Werror
+#FLAG = -Wall -Wextra -Werror
 
 all:	$(NAME)
 

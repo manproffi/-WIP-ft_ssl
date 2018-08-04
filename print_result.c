@@ -52,6 +52,7 @@ void    print_result(t_info * info, const char *str, const char *filename)
     }
     if (ft_strcmp(str, "") == 0 && (flag & 2) == 0)
         info->flags  &= ~2;;
+//    ft_strdel(&filename);
 
 
 
