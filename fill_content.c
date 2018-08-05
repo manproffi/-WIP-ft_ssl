@@ -82,9 +82,8 @@ void    print_without_stdin(t_info *info)
 //            info->flags = (info->flags | 64);
             s_tmp = info->flags;
             info->flags = flag_s;
-            md5_algo(info, tmp->content, "");
+            choice_alg_fun(info, tmp->content, "");
             info->flags = s_tmp;
-
         }
         else if (tmp->key == 'f')
         {

@@ -73,8 +73,8 @@ add_executable(ft_ssl
         head_ssl.h
         main.c
         parsing_command.c
-        start_work_with_md5.c
-        start_work_with_sha256.c
+        #start_work_with_md5.c
+        #start_work_with_sha256.c
         md5_algo.c
         append_padding_bits.c
         fun.c
@@ -85,4 +85,8 @@ add_executable(ft_ssl
         pre_parsing_flags.c
         control_s_flags.c
         fill_content.c
+        choice_algorithm_function.c
+        #start_work.c
+        sha256_algo.c
+        append_padding_bits_256.c
         )

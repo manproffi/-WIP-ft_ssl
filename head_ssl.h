@@ -56,6 +56,7 @@ typedef struct 		s_info
 	int				argc_count;
     int             validation_flag;
 
+    char            *algo_name;
 
     size_t          n;
     unsigned int    **mass;
@@ -71,17 +72,20 @@ typedef struct 		s_info
     struct s_flags  *new_flags;
 }					t_info;
 
-void	parsing_flags(int argc, const char *argv[], t_info *info);
-void    start_work_with_md5(t_info *info, int argc, const char *argv[]);
-void    start_work_with_sha256(t_info *info, int argc, const char *argv[]);
+//void	parsing_flags(int argc, const char *argv[], t_info *info);
+//void    start_work_with_md5(t_info *info, int argc, const char *argv[]);
+//void    start_work_with_sha256(t_info *info, int argc, const char *argv[]);
 void    md5_algo(t_info *info, const char *string, const char *filename);
+void    sha256_algo(t_info *info, const char *string, const char *filename);
 void    append_padding_bits(t_info *info, const char *string);
+void    append_padding_bits_256(t_info *info, const char *string);
 void	read_screen(t_info *info, int flag_p);
 void    read_file(t_info *info, const char *name);
 void    print_result(t_info * info, const char *str, const char *filename);
 unsigned int rev_bit(unsigned int a);
 int    pre_parsing_flags(int argc, const char *argv[], t_info *info);
 void    fill_content(int argc, const char *argv[], t_info *info);
+void    choice_alg_fun(t_info *info, const char *string, const char *filename);
 
 
 void	lstaddend(t_flags **alst, t_flags *new);

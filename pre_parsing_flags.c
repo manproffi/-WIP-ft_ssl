@@ -12,32 +12,32 @@
 
 #include "head_ssl.h"
 
-int     find_flag(const char c, t_info *info)
-{
-    if (c == 'q')
-    {
-        info->keys = info->keys | 1;
-        lstaddend(&info->new_flags ,lstnew("", 1, 'q'));
-        return (0);
-    }
-    else if (c == 'r')
-    {
-        info->keys = info->keys | 2;
-        return (0);
-    }
-    else if (c == 'p')
-    {
-        info->keys = info->keys | 4;
-        return (0);
-    }
-    else if (c == 's')
-    {
-        info->keys = info->keys | 8;
-        return (1);
-    }
-    else
-        return (2);
-}
+//int     find_flag(const char c, t_info *info)
+//{
+//    if (c == 'q')
+//    {
+//        info->keys = info->keys | 1;
+//        lstaddend(&info->new_flags ,lstnew("", 1, 'q'));
+//        return (0);
+//    }
+//    else if (c == 'r')
+//    {
+//        info->keys = info->keys | 2;
+//        return (0);
+//    }
+//    else if (c == 'p')
+//    {
+//        info->keys = info->keys | 4;
+//        return (0);
+//    }
+//    else if (c == 's')
+//    {
+//        info->keys = info->keys | 8;
+//        return (1);
+//    }
+//    else
+//        return (2);
+//}
 
 int		check_flag(char c)
 {

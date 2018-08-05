@@ -1,17 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   append_padding_bits.c                              :+:      :+:    :+:   */
+/*   append_padding_bits_256.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sprotsen <sprotsen@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/15 12:48:34 by sprotsen          #+#    #+#             */
-/*   Updated: 2018/07/15 13:21:38 by sprotsen         ###   ########.fr       */
+/*   Created: 2018/08/05 17:20:29 by sprotsen          #+#    #+#             */
+/*   Updated: 2018/08/05 17:20:31 by sprotsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "head_ssl.h"
 
+unsigned int    rotr(unsigned int x, int n)
+{
+    return (x >> n) | (x << (32 - n));
+}
 
 
 static void    allocate_memory(t_info *info)
@@ -27,7 +31,7 @@ static void    allocate_memory(t_info *info)
     }
 }
 
-static void    fill_mass(t_info *info, const char *string)
+static void    next_step_fill_mass(t_info *info, const char *string)
 {
     int     i;
     int     j;
@@ -52,22 +56,17 @@ static void    fill_mass(t_info *info, const char *string)
             tmp[k] = (char)128;
     }
     len = ft_strlen(string) * 8;
-    info->mass[info->n - 1][15] = (len >> 32);
-    info->mass[info->n - 1][14] = len & 4294967295;
+    info->mass[info->n - 1][14] = rev_bit((unsigned int)(len >> 32));
+    info->mass[info->n - 1][15] = rev_bit((unsigned int)(len & 4294967295));
 }
 
-void    append_padding_bits(t_info *info, const char *string)
+void    append_padding_bits_256(t_info *info, const char *string)
 {
-
     info->n = (ft_strlen(string) * 8) / 512;
 
     if ((info->n + 1) * 512 - 64 > ft_strlen(string) * 8)
         info->n += 1;
     else
         info->n += 2;
-
-    fill_mass(info, string);
-//    system("leaks ft_ssl -q");
+    next_step_fill_mass(info, string);
 }
-
-

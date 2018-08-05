@@ -29,10 +29,8 @@ void    read_file_last(t_info *info, int fd, const char *filename)
         input_str = ft_strjoin(tmp,buffer);
         ft_strdel(&tmp);
     }
-//    printf("%s\n", input_str);
-    md5_algo(info, input_str, filename);
+    choice_alg_fun(info, input_str, filename);
     ft_strdel(&input_str);
-//    system("leaks ft_ssl -q");
 }
 
 void   read_file_next(t_info *info, const char *name)
@@ -57,19 +55,10 @@ void   read_file_next(t_info *info, const char *name)
 char *take_filename(const char *name)
 {
     struct stat p_stat;
-    int		len_symlink_name;
-    char	buffer[256];
+    int		    len_symlink_name;
+    char	    buffer[256];
 
     lstat(name, &p_stat);
-
-//    printf("%d\n", S_ISBLK(p_stat.st_mode));
-//    printf("%d\n", S_ISCHR(p_stat.st_mode));
-//    printf("%d\n", S_ISDIR(p_stat.st_mode));
-//    printf("%d\n", S_ISFIFO(p_stat.st_mode));
-//    printf("%d\n", S_ISREG(p_stat.st_mode));
-//    printf("%d\n", S_ISLNK(p_stat.st_mode));
-//    printf("%d\n", S_ISSOCK(p_stat.st_mode));
-
     if (S_ISLNK(p_stat.st_mode))
     {
         len_symlink_name = readlink(name, buffer, 256);
@@ -96,7 +85,6 @@ void    read_file(t_info *info, const char *name)
             printf("ft_ssl: %s: Is a directory\n", name);
         else
             read_file_next(info, res);
-//        printf("%p", res);
         ft_strdel(&res);
     }
     else
@@ -105,5 +93,4 @@ void    read_file(t_info *info, const char *name)
         perror(error);
         ft_strdel(&error);
     }
-//    system("leaks ft_ssl -q");
 }

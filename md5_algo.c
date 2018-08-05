@@ -36,7 +36,6 @@ void    initialization_t(t_info *info)
     while (++i < 65)
     {
         info->t[i] = 4294967296 * fabs(sin(i));
-//        printf("[%zu] %u\n", i - 1, info->t[i]);
     }
 }
 
@@ -54,16 +53,11 @@ unsigned int rev_bit(unsigned int a)
 
 void    md5_algo(t_info *info, const char *string, const char *filename)
 {
-//    printf("*****  start md5_algo *****\n");
-//    printf("%s %s\n", string, filename);
-//    (void)info;
+    int  i;
 
     append_padding_bits(info, string);
-//    system("leaks ft_ssl -q");
     initialization_t(info);
 
-
-    size_t  i;
     unsigned int a = 0x67452301;
     unsigned int b = 0xEFCDAB89;
     unsigned int c = 0x98BADCFE;

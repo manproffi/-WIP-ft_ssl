@@ -37,6 +37,6 @@ void	read_screen(t_info *info, int flag_p)
 	}
 	if (flag_p)
 		printf("%s", input_str);
-	md5_algo(info, input_str, "");
+    choice_alg_fun(info, input_str, "");
 	ft_strdel(&input_str);
 }

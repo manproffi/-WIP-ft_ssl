@@ -22,9 +22,10 @@ LIB_DIR = ./lib_folder/libft
 
 LIB_ALL = -L$(LIB_DIR) -l$(LIB_NAME) #-L$(LIB_DIR2) -l$(LIB_NAME2)
 
-SRC = main.c parsing_command.c  start_work_with_md5.c start_work_with_sha256.c \
+SRC = main.c parsing_command.c \
     md5_algo.c append_padding_bits.c fun.c fun_round.c read_screen.c read_file.c \
-    print_result.c  pre_parsing_flags.c control_s_flags.c fill_content.c
+    print_result.c  pre_parsing_flags.c control_s_flags.c fill_content.c \
+    choice_algorithm_function.c sha256_algo.c append_padding_bits_256.c
  
 OBJ = $(SRC:.c=.o)
 

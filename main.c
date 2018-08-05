@@ -37,10 +37,12 @@ int main(int argc, char const *argv[])
 	initialization_info(&info);
 	if (argc == 1)
 		printf("usage: ft_ssl command [command opts] [command args]\n");
-	else if (ft_strcmp(argv[1], "md5") == 0)
-        start_work_with_md5(&info, argc, argv);
-    else if (strcmp(argv[1], "sha256") == 0)
-        start_work_with_sha256(&info, argc, argv);
+	else if (ft_strcmp(argv[1], "md5") == 0 || strcmp(argv[1], "sha256") == 0)
+    {
+        info.algo_name = ft_strdup(argv[1]);
+        pre_parsing_flags(argc, argv, &info);
+        fill_content(argc, argv, &info);
+    }
     else
     {
         printf("ft_ssl: Error: '%s' is an invalid command.\n", argv[1]);
