@@ -89,4 +89,5 @@ add_executable(ft_ssl
         #start_work.c
         sha256_algo.c
         append_padding_bits_256.c
+        fun_256.c
         )

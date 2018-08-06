@@ -12,12 +12,6 @@
 
 #include "head_ssl.h"
 
-unsigned int    rotr(unsigned int x, int n)
-{
-    return (x >> n) | (x << (32 - n));
-}
-
-
 static void    allocate_memory(t_info *info)
 {
     size_t i;

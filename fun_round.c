@@ -20,12 +20,7 @@ unsigned int rol(unsigned int a, unsigned int offset)
 
 void    fun_r1(unsigned int *a, unsigned int b, unsigned int c, unsigned int d, unsigned int x, unsigned int s, unsigned int i, t_info *info)
 {
-//    printf("a %u b %u c %u d %u x %u s %u i %u info %u", a, b, c, d, x, s, i, info->t[i]);
     *a = b + (rol(*a + fun_f(b,c,d) + x + info->t[i], s));
-//    printf("aaaa *** %u\n",a);
-//    sleep(23);
-//    a = b + ((a + F(b,c,d) + X[k] + T[i]) <<< s)
-//    a = b + ((a + F(b,c,d) + X + T[i]) <<< s)
 }
 
 void    fun_r2(unsigned int *a, unsigned int b, unsigned int c, unsigned int d, unsigned int x, unsigned int s, unsigned int i, t_info *info)
