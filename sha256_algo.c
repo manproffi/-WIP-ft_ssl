@@ -38,14 +38,35 @@ static void	initialization_t(t_info *info)
         info->t[i] = k[i++];
 }
 
+void	initialization_h_num(t_h *rhs)
+{
+	rhs->h0 = 0x6a09e667;
+	rhs->h1 = 0xbb67ae85;
+	rhs->h2 = 0x3c6ef372;
+	rhs->h3 = 0xa54ff53a;
+	rhs->h4 = 0x510e527f;
+	rhs->h5 = 0x9b05688c;
+	rhs->h6 = 0x1f83d9ab;
+	rhs->h7 = 0x5be0cd19;
+}
+
 void    sha256_algo(t_info *info, const char *string, const char *filename)
 {
-    append_padding_bits_256(info, string);
+    t_h 	h_num;
+
+	initialization_h_num(&h_num);
+	append_padding_bits_256(info, string);
     initialization_t(info);
 
     (void)filename;
 
 
+	main_loop(info, &h_num);
+
+
+
+
+	///******* debug *******///
     int k = -1;
     while (++k < info->n)
     {

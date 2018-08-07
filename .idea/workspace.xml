@@ -15,8 +15,16 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
       <change beforePath="$PROJECT_DIR$/Makefile" afterPath="$PROJECT_DIR$/Makefile" />
-      <change beforePath="$PROJECT_DIR$/append_padding_bits_256.c" afterPath="$PROJECT_DIR$/append_padding_bits_256.c" />
-      <change beforePath="$PROJECT_DIR$/fun_round.c" afterPath="$PROJECT_DIR$/fun_round.c" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ssl.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ssl.dir/DependInfo.cmake" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ssl.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ssl.dir/build.make" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ssl.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ssl.dir/cmake_clean.cmake" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ssl.dir/link.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ssl.dir/link.txt" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ssl.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ssl.dir/progress.make" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ft_ssl.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/ft_ssl.cbp" />
+      <change beforePath="$PROJECT_DIR$/head_ssl.h" afterPath="$PROJECT_DIR$/head_ssl.h" />
       <change beforePath="$PROJECT_DIR$/sha256_algo.c" afterPath="$PROJECT_DIR$/sha256_algo.c" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -29,14 +37,14 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4839688">
+    <splitter split-orientation="horizontal" split-proportion="0.41192052">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="main.c" pinned="false" current-in-tab="true">
+          <file leaf-file-name="main.c" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/main.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="750">
-                  <caret line="50" column="32" lean-forward="true" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="32" />
+                <state relative-caret-position="0">
+                  <caret line="37" column="18" lean-forward="false" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
                   <folding />
                 </state>
               </provider>
@@ -45,7 +53,7 @@
           <file leaf-file-name="pre_parsing_flags.c" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pre_parsing_flags.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
+                <state relative-caret-position="1410">
                   <caret line="94" column="5" lean-forward="false" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
                   <folding>
                     <marker date="1533465934000" expanded="true" signature="917:1465" ph="..." />
@@ -67,8 +75,8 @@
           <file leaf-file-name="sha256_algo.c" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/sha256_algo.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="480">
-                  <caret line="32" column="43" lean-forward="false" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
+                <state relative-caret-position="630">
+                  <caret line="42" column="25" lean-forward="true" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
                   <folding />
                 </state>
               </provider>
@@ -77,8 +85,8 @@
           <file leaf-file-name="fun_256.c" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/fun_256.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="357">
-                  <caret line="37" column="1" lean-forward="true" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
+                <state relative-caret-position="769">
+                  <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="38" />
                   <folding />
                 </state>
               </provider>
@@ -88,7 +96,7 @@
             <entry file="file://$PROJECT_DIR$/append_padding_bits_256.c">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="675">
-                  <caret line="45" column="9" lean-forward="true" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+                  <caret line="45" column="9" lean-forward="false" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
                   <folding />
                 </state>
               </provider>
@@ -98,7 +106,7 @@
             <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="897">
-                  <caret line="91" column="17" lean-forward="false" selection-start-line="91" selection-start-column="17" selection-end-line="91" selection-end-column="17" />
+                  <caret line="92" column="19" lean-forward="false" selection-start-line="92" selection-start-column="19" selection-end-line="92" selection-end-column="19" />
                   <folding />
                 </state>
               </provider>
@@ -107,28 +115,18 @@
           <file leaf-file-name="read_file.c" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/read_file.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="735">
-                  <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+                <state relative-caret-position="-408">
+                  <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="21" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Makefile" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Makefile">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="405">
-                  <caret line="27" column="81" lean-forward="false" selection-start-line="27" selection-start-column="81" selection-end-line="27" selection-end-column="81" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="print_result.c" pinned="false" current-in-tab="false">
+          <file leaf-file-name="print_result.c" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/print_result.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="360">
-                  <caret line="24" column="53" lean-forward="false" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="53" />
+                <state relative-caret-position="435">
+                  <caret line="29" column="17" lean-forward="true" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="20" />
                   <folding />
                 </state>
               </provider>
@@ -148,7 +146,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="fun.c" pinned="false" current-in-tab="true">
+          <file leaf-file-name="fun.c" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/fun.c">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="0">
@@ -161,7 +159,7 @@
           <file leaf-file-name="md5_algo.c" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/md5_algo.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="781">
+                <state relative-caret-position="855">
                   <caret line="57" column="38" lean-forward="false" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="38" />
                   <folding />
                 </state>
@@ -191,11 +189,21 @@
           <file leaf-file-name="head_ssl.h" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/head_ssl.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1150">
-                  <caret line="80" column="66" lean-forward="false" selection-start-line="80" selection-start-column="66" selection-end-line="80" selection-end-column="66" />
+                <state relative-caret-position="1735">
+                  <caret line="127" column="39" lean-forward="false" selection-start-line="127" selection-start-column="39" selection-end-line="127" selection-end-column="39" />
                   <folding>
                     <element signature="e#1010#1027#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="main_loop.c" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/main_loop.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="228">
+                  <caret line="59" column="89" lean-forward="false" selection-start-line="59" selection-start-column="89" selection-end-line="59" selection-end-column="89" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -240,13 +248,14 @@
         <option value="$PROJECT_DIR$/fill_content.c" />
         <option value="$PROJECT_DIR$/choice_algorithm_function.c" />
         <option value="$PROJECT_DIR$/append_padding_bits.c" />
-        <option value="$PROJECT_DIR$/head_ssl.h" />
-        <option value="$PROJECT_DIR$/sha256_algo.c" />
         <option value="$PROJECT_DIR$/fun_round.c" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/Makefile" />
         <option value="$PROJECT_DIR$/append_padding_bits_256.c" />
         <option value="$PROJECT_DIR$/fun_256.c" />
+        <option value="$PROJECT_DIR$/sha256_algo.c" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/Makefile" />
+        <option value="$PROJECT_DIR$/head_ssl.h" />
+        <option value="$PROJECT_DIR$/main_loop.c" />
       </list>
     </option>
   </component>
@@ -350,11 +359,13 @@
       <workItem from="1533468457319" duration="57000" />
       <workItem from="1533468568950" duration="8105000" />
       <workItem from="1533571805715" duration="3639000" />
+      <workItem from="1533658504670" duration="829000" />
+      <workItem from="1533661381283" duration="3861000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94604000" />
+    <option name="totallyTimeSpent" value="99294000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
@@ -364,12 +375,12 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991952" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32845646" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32845646" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3035845" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39941478" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39941478" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3269934" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -398,14 +409,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/main.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1155">
@@ -612,7 +615,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pre_parsing_flags.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="1410">
           <caret line="94" column="5" lean-forward="false" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
           <folding>
             <marker date="1533465934000" expanded="true" signature="917:1465" ph="..." />
@@ -628,44 +631,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/read_file.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/print_result.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="53" lean-forward="false" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fun_round.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/head_ssl.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1150">
-          <caret line="80" column="66" lean-forward="false" selection-start-line="80" selection-start-column="66" selection-end-line="80" selection-end-column="66" />
-          <folding>
-            <element signature="e#1010#1027#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sha256_algo.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="43" lean-forward="false" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
           <folding />
         </state>
       </provider>
@@ -678,17 +647,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/append_padding_bits.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="14" lean-forward="false" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/md5_algo.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="781">
+        <state relative-caret-position="855">
           <caret line="57" column="38" lean-forward="false" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="38" />
           <folding />
         </state>
@@ -702,42 +663,92 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="897">
-          <caret line="91" column="17" lean-forward="false" selection-start-line="91" selection-start-column="17" selection-end-line="91" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="81" lean-forward="false" selection-start-line="27" selection-start-column="81" selection-end-line="27" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/append_padding_bits_256.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
-          <caret line="45" column="9" lean-forward="true" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fun_256.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="37" column="1" lean-forward="true" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
+          <caret line="45" column="9" lean-forward="false" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="50" column="32" lean-forward="true" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="32" />
+        <state relative-caret-position="0">
+          <caret line="37" column="18" lean-forward="false" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="897">
+          <caret line="92" column="19" lean-forward="false" selection-start-line="92" selection-start-column="19" selection-end-line="92" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="16" lean-forward="false" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/read_file.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-408">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/append_padding_bits.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="14" lean-forward="false" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fun_256.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="769">
+          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/head_ssl.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1735">
+          <caret line="127" column="39" lean-forward="false" selection-start-line="127" selection-start-column="39" selection-end-line="127" selection-end-column="39" />
+          <folding>
+            <element signature="e#1010#1027#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sha256_algo.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="42" column="25" lean-forward="true" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/print_result.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="17" lean-forward="true" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_loop.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="59" column="89" lean-forward="false" selection-start-line="59" selection-start-column="89" selection-end-line="59" selection-end-column="89" />
           <folding />
         </state>
       </provider>

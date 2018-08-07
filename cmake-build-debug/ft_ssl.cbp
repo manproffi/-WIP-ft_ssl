@@ -308,6 +308,9 @@
 		<Unit filename="/Users/sprotsen/ft_ssl/main.c">
 			<Option target="ft_ssl"/>
 		</Unit>
+		<Unit filename="/Users/sprotsen/ft_ssl/main_loop.c">
+			<Option target="ft_ssl"/>
+		</Unit>
 		<Unit filename="/Users/sprotsen/ft_ssl/md5_algo.c">
 			<Option target="ft_ssl"/>
 		</Unit>

@@ -78,6 +78,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/sprotsen/ft_ssl/lib_folder/libft/ft_toupper.c" "/Users/sprotsen/ft_ssl/cmake-build-debug/CMakeFiles/ft_ssl.dir/lib_folder/libft/ft_toupper.c.o"
   "/Users/sprotsen/ft_ssl/lib_folder/libft/get_next_line.c" "/Users/sprotsen/ft_ssl/cmake-build-debug/CMakeFiles/ft_ssl.dir/lib_folder/libft/get_next_line.c.o"
   "/Users/sprotsen/ft_ssl/main.c" "/Users/sprotsen/ft_ssl/cmake-build-debug/CMakeFiles/ft_ssl.dir/main.c.o"
+  "/Users/sprotsen/ft_ssl/main_loop.c" "/Users/sprotsen/ft_ssl/cmake-build-debug/CMakeFiles/ft_ssl.dir/main_loop.c.o"
   "/Users/sprotsen/ft_ssl/md5_algo.c" "/Users/sprotsen/ft_ssl/cmake-build-debug/CMakeFiles/ft_ssl.dir/md5_algo.c.o"
   "/Users/sprotsen/ft_ssl/parsing_command.c" "/Users/sprotsen/ft_ssl/cmake-build-debug/CMakeFiles/ft_ssl.dir/parsing_command.c.o"
   "/Users/sprotsen/ft_ssl/pre_parsing_flags.c" "/Users/sprotsen/ft_ssl/cmake-build-debug/CMakeFiles/ft_ssl.dir/pre_parsing_flags.c.o"

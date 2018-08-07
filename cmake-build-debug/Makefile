@@ -2121,6 +2121,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/ft_ssl.dir/build.make CMakeFiles/ft_ssl.dir/main.c.s
 .PHONY : main.c.s
 
+main_loop.o: main_loop.c.o
+
+.PHONY : main_loop.o
+
+# target to build an object file
+main_loop.c.o:
+	$(MAKE) -f CMakeFiles/ft_ssl.dir/build.make CMakeFiles/ft_ssl.dir/main_loop.c.o
+.PHONY : main_loop.c.o
+
+main_loop.i: main_loop.c.i
+
+.PHONY : main_loop.i
+
+# target to preprocess a source file
+main_loop.c.i:
+	$(MAKE) -f CMakeFiles/ft_ssl.dir/build.make CMakeFiles/ft_ssl.dir/main_loop.c.i
+.PHONY : main_loop.c.i
+
+main_loop.s: main_loop.c.s
+
+.PHONY : main_loop.s
+
+# target to generate assembly for a file
+main_loop.c.s:
+	$(MAKE) -f CMakeFiles/ft_ssl.dir/build.make CMakeFiles/ft_ssl.dir/main_loop.c.s
+.PHONY : main_loop.c.s
+
 md5_algo.o: md5_algo.c.o
 
 .PHONY : md5_algo.o
@@ -2541,6 +2568,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... main_loop.o"
+	@echo "... main_loop.i"
+	@echo "... main_loop.s"
 	@echo "... md5_algo.o"
 	@echo "... md5_algo.i"
 	@echo "... md5_algo.s"

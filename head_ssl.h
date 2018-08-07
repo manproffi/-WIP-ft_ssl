@@ -41,6 +41,20 @@
 //    int             b15;
 //}                   t_block;
 
+typedef struct      s_h_num
+{
+	unsigned int    h0;
+	unsigned int    h1;
+	unsigned int    h2;
+	unsigned int    h3;
+	unsigned int    h4;
+	unsigned int    h5;
+	unsigned int    h6;
+	unsigned int    h7;
+}                   t_h;
+
+
+
 typedef struct      s_flags
 {
     char            key;
@@ -91,6 +105,7 @@ void    choice_alg_fun(t_info *info, const char *string, const char *filename);
 void	lstaddend(t_flags **alst, t_flags *new);
 t_flags	*lstnew(void const *content, size_t content_size, char c);
 void	del_list_list(t_flags **list);
+void	main_loop(t_info *info, t_h *h);
 
 unsigned int    fun_f(unsigned int x, unsigned int y, unsigned int z);
 unsigned int    fun_g(unsigned int x, unsigned int y, unsigned int z);
@@ -101,6 +116,16 @@ void    fun_r1(unsigned int *a, unsigned int b, unsigned int c, unsigned int d, 
 void    fun_r2(unsigned int *a, unsigned int b, unsigned int c, unsigned int d, unsigned int x, unsigned int s, unsigned int i, t_info *info);
 void    fun_r3(unsigned int *a, unsigned int b, unsigned int c, unsigned int d, unsigned int x, unsigned int s, unsigned int i, t_info *info);
 void    fun_r4(unsigned int *a, unsigned int b, unsigned int c, unsigned int d, unsigned int x, unsigned int s, unsigned int i, t_info *info);
+
+
+unsigned int    rotr(unsigned int x, int n);
+unsigned int    shr(unsigned int x, int n);
+unsigned int    ch(unsigned int x, unsigned int y, unsigned int z);
+unsigned int    maj(unsigned int x, unsigned int y, unsigned int z);
+unsigned int    sigma0(unsigned int x);
+unsigned int    sigma1(unsigned int x);
+unsigned int    delta0(unsigned int x);
+unsigned int    delta1(unsigned int x);
 
 
 
