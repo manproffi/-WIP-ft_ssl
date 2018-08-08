@@ -12,6 +12,22 @@
 
 #include "head_ssl.h"
 
+
+void   delete_mass_sha256(t_info *info)
+{
+    size_t     i;
+
+    i = 0;
+    while (i < info->n)
+    {
+        printf("%zu\n", i);
+		free(info->mass[i]);
+        ++i;
+    }
+    free(info->mass);
+    info->mass = NULL;
+}
+
 static void	initialization_t(t_info *info)
 {
 	static unsigned int k[] = {
@@ -58,13 +74,13 @@ void    sha256_algo(t_info *info, const char *string, const char *filename)
 	append_padding_bits_256(info, string);
     initialization_t(info);
 
-    (void)filename;
+    // (void)filename;
 
 
 	main_loop(info, &h_num);
 
 	print_res_sha256(info, string, filename, &h_num);
-
+	delete_mass_sha256(info);
 
 
 

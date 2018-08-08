@@ -52,13 +52,12 @@ static void    fill_mass(t_info *info, const char *string)
             tmp[k] = (char)128;
     }
     len = ft_strlen(string) * 8;
-    info->mass[info->n - 1][15] = (len >> 32);
-    info->mass[info->n - 1][14] = len & 4294967295;
+    info->mass[info->n - 1][15] = (unsigned int)(len >> 32);
+    info->mass[info->n - 1][14] = (unsigned int)(len & 4294967295);
 }
 
 void    append_padding_bits(t_info *info, const char *string)
 {
-
     info->n = (ft_strlen(string) * 8) / 512;
 
     if ((info->n + 1) * 512 - 64 > ft_strlen(string) * 8)

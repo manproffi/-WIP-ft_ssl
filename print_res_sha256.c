@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   print_res_sha256.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sprotsen <sprotsen@student.unit.ua>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/08/08 19:29:56 by sprotsen          #+#    #+#             */
+/*   Updated: 2018/08/08 19:29:58 by sprotsen         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "head_ssl.h"
 
 static void	print_1(t_h *h)
@@ -17,7 +29,7 @@ static void	print_2(t_info *info, t_h *h, const char *filename, const char *str)
 {
 	if ((info->flags & 32) == 32)
 	{
-		printf("%.8x%.8x%.8x%.8x%.8x%.8x%.8x%.8x %s\n", h->h0,
+		printf("%.8x%.8x%.8x%.8x%.8x%.8x%.8x%.8x  %s\n", h->h0,
 												h->h1,
 												h->h2,
 												h->h3,
@@ -31,7 +43,7 @@ static void	print_2(t_info *info, t_h *h, const char *filename, const char *str)
 	}
 	else
 	{
-		printf("%.8x%.8x%.8x%.8x%.8x%.8x%.8x%.8x %s\n", (h->h0),
+		printf("%.8x%.8x%.8x%.8x%.8x%.8x%.8x%.8x  %s\n", (h->h0),
 			(h->h1), (h->h2), (h->h3), (h->h4), (h->h5), (h->h6), (h->h7), str);
 	}
 }
@@ -40,7 +52,7 @@ static void	print_3(t_info *info, t_h *h, const char *filename, const char *str)
 {
 	if ((info->flags & 32) == 32)
 	{
-		printf("MD5 (\"%s\") = %.8x%.8x%.8x%.8x%.8x%.8x%.8x%.8x\n", str,
+		printf("MD5 (\"%s\") = %.8x%.8x%.8x%.8x%.8x%.8x%.8x%.8x\n", filename,
 											    h->h0,
 												h->h1,
 												h->h2,

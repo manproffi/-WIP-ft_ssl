@@ -320,6 +320,9 @@
 		<Unit filename="/Users/sprotsen/ft_ssl/pre_parsing_flags.c">
 			<Option target="ft_ssl"/>
 		</Unit>
+		<Unit filename="/Users/sprotsen/ft_ssl/print_res_sha256.c">
+			<Option target="ft_ssl"/>
+		</Unit>
 		<Unit filename="/Users/sprotsen/ft_ssl/print_result.c">
 			<Option target="ft_ssl"/>
 		</Unit>

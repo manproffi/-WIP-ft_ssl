@@ -48,6 +48,6 @@ int main(int argc, char const *argv[])
         printf("ft_ssl: Error: '%s' is an invalid command.\n", argv[1]);
         printf("Message Digest commands:\nmd5\nsha256\n");
     }
-//    system("leaks ft_ssl -q");
+    system("leaks ft_ssl -q");
 	return 0;
 }

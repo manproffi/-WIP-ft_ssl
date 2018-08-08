@@ -35,7 +35,7 @@ void    initialization_t(t_info *info)
     i = 0;
     while (++i < 65)
     {
-        ; //info->t[i] = 4294967296 * fabs(sin(i));
+        info->t[i] = 4294967296 * fabs(sin(i));
     }
 }
 

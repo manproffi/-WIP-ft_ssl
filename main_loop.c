@@ -64,56 +64,44 @@ void	initializ_tmp(t_h * tmp, t_h *start)
 	// sleep(32);
 }
 
+unsigned long long internal_loop_part(t_h *tmp, int m[], t_info *info, int i)
+{
+	unsigned long long temp1;
+
+	temp1 = (unsigned long long)(tmp->h7) + (sigma1(tmp->h4));
+	temp1 %= 4294967296;
+	temp1 += ch(tmp->h4, tmp->h5, tmp->h6);
+	temp1 %= 4294967296;
+	temp1 += m[i];
+	temp1 %= 4294967296;
+	temp1 += info->t[i];
+	temp1 %= 4294967296;
+	return (temp1);
+}
+
 void	internal_loop(t_h *tmp, int m[], t_info *info)
 {
 	int 	i;
 	unsigned long long temp1;
 	unsigned long long temp2;
+	unsigned long long temporary;
 
 	i = -1;
 	while (++i < 64)
 	{
-		// printf("%u\n", tmp->h7);
-		// printf("%u\n", sigma1(tmp->h4));
-		// printf("%u\n", ch(tmp->h4, tmp->h5, tmp->h6));
-		// printf("%u\n", m[i]);
-		// printf("%u\n", info->t[i]);
-
-		// temp1 =		(unsigned long long)(tmp->h7) + (sigma1(tmp->h4)) + (ch(tmp->h4, tmp->h5, tmp->h6)) + (m[i]) + (info->t[i]);
-		
-		temp1 = (unsigned long long)(tmp->h7) + (sigma1(tmp->h4));
-		temp1 %= 4294967296;
-		temp1 += ch(tmp->h4, tmp->h5, tmp->h6);
-		temp1 %= 4294967296;
-		temp1 += m[i];
-		temp1 %= 4294967296;
-		temp1 += info->t[i];
-		temp1 %= 4294967296;
-
-		temp2 = 	(unsigned long long)(sigma0(tmp->h0)) + (maj(tmp->h0, tmp->h1, tmp->h2));
+		temp1 = internal_loop_part(tmp, m, info, i);
+		temp2 = (unsigned long long)(sigma0(tmp->h0)) + (maj(tmp->h0, tmp->h1, tmp->h2));
 		temp2 %= 4294967296;
-
-
-		// printf("temp1= %llu %llu %u\n", temp1, temp2,  tmp->h2);
-		// sleep(32);
 		tmp->h7 = 	(tmp->h6);
 		tmp->h6 = 	(tmp->h5);
 		tmp->h5 = 	(tmp->h4);
-		tmp->h4 = 	(tmp->h3) + temp1;
+		temporary = (tmp->h3) + temp1;
+		tmp->h4 = 	(unsigned int)(temporary % 4294967296);
 		tmp->h3 = 	(tmp->h2);
 		tmp->h2 = 	(tmp->h1);
 		tmp->h1 = 	(tmp->h0);
-		tmp->h0 = 	(temp1 + temp2);
-		// printf("%.8X %.8X %.8X %.8X %.8X %.8X %.8X %.8X\n",   (tmp->h0),
-		// 							(tmp->h1),
-		// 							(tmp->h2),
-		// 							(tmp->h3),
-		// 							(tmp->h4),
-		// 							(tmp->h5),
-		// 							(tmp->h6),
-		// 							(tmp->h7));
-		// sleep(43);
-
+		temporary = (temp1 + temp2);
+		tmp->h0 = (unsigned int)(temporary % 4294967296);
 	}
 }
 

@@ -58,7 +58,7 @@ char *take_filename(const char *name)
     int		    len_symlink_name;
     char	    buffer[256];
 
-    lstat(name, &p_stat);
+    stat(name, &p_stat);
     if (S_ISLNK(p_stat.st_mode))
     {
         len_symlink_name = readlink(name, buffer, 256);
@@ -68,7 +68,9 @@ char *take_filename(const char *name)
     if (S_ISDIR(p_stat.st_mode))
         return NULL;
     if (S_ISREG(p_stat.st_mode))
+    {
         return ft_strdup(name);
+    }
     return NULL;
 }
 
