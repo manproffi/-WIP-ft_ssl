@@ -57,14 +57,14 @@
 //    return (0);
 //}
 
-//int	    list_flag(t_info *info, int i, int j, const char *argv[])
-//{
-//	int		flag_correct;
-//
-//	flag_correct = info->flags;
-//	info->flags = (argv[i][j] == 'r') ? (info->flags | 1) : (info->flags);
-//	info->flags = (argv[i][j] == 'q') ? (info->flags | 2) : (info->flags);
-//	if (argv[i][j] == 'p')
+// int	    list_flag(t_info *info, int i, int j, const char *argv[])
+// {
+// 	int		flag_correct;
+
+// 	flag_correct = info->flags;
+// 	info->flags = (argv[i][j] == 'r') ? (info->flags | 1) : (info->flags);
+// 	info->flags = (argv[i][j] == 'q') ? (info->flags | 2) : (info->flags);
+// 	if (argv[i][j] == 'p')
 //    {
 //        printf("***%c\n", argv[i][j]);
 //        info->flags = info->flags | 4;

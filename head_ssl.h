@@ -100,10 +100,11 @@ unsigned int rev_bit(unsigned int a);
 int    pre_parsing_flags(int argc, const char *argv[], t_info *info);
 void    fill_content(int argc, const char *argv[], t_info *info);
 void    choice_alg_fun(t_info *info, const char *string, const char *filename);
+void    print_res_sha256(t_info *info, const char *str,  const char *filename, t_h *h);
 
 
 void	lstaddend(t_flags **alst, t_flags *new);
-t_flags	*lstnew(void const *content, size_t content_size, char c);
+t_flags *lstnew(const char *content, size_t content_size, char c);
 void	del_list_list(t_flags **list);
 void	main_loop(t_info *info, t_h *h);
 

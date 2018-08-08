@@ -31,11 +31,11 @@ static void	initialization_t(t_info *info)
 		0x4ed8aa4a, 0x5b9cca4f, 0x682e6ff3,
 		0x748f82ee, 0x78a5636f, 0x84c87814, 0x8cc70208, 0x90befffa,
 		0xa4506ceb, 0xbef9a3f7, 0xc67178f2 };
-    size_t              i;
+    int              i;
 
-    i = 0;
-    while (i < 64)
-        info->t[i] = k[i++];
+    i = -1;
+    while (++i < 64)
+        info->t[i] = k[i];
 }
 
 void	initialization_h_num(t_h *rhs)
@@ -63,20 +63,24 @@ void    sha256_algo(t_info *info, const char *string, const char *filename)
 
 	main_loop(info, &h_num);
 
+	print_res_sha256(info, string, filename, &h_num);
+
+
 
 
 
 	///******* debug *******///
-    int k = -1;
-    while (++k < info->n)
-    {
-        int i = -1;
-        while (++i < 16)
-        {
-            unsigned char *str = (unsigned char*)&(info)->mass[k][i];
-            printf("%02x%02x%02x%02x\n", str[0], str[1], str[2], str[3]);
-        }
-    }
+	// printf("string: %s\n", string);
+ //    int k = -1;
+ //    while (++k < info->n)
+ //    {
+ //        int i = -1;
+ //        while (++i < 16)
+ //        {
+ //            unsigned char *str = (unsigned char*)&(info)->mass[k][i];
+ //            printf("%02x%02x%02x%02x\n", str[0], str[1], str[2], str[3]);
+ //        }
+ //    }
 
 
 

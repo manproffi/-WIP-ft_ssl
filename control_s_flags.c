@@ -28,7 +28,7 @@ void	lstaddend(t_flags **alst, t_flags *new)
 }
 
 
-t_flags	*lstnew(void const *content, size_t content_size, char c)
+t_flags	*lstnew(const char *content, size_t content_size, char c)
 {
     t_flags		*list;
 
@@ -38,7 +38,7 @@ t_flags	*lstnew(void const *content, size_t content_size, char c)
     if (content)
     {
         list->key = c;
-        list->content = malloc(content_size);
+        list->content = ft_strdup(content);
         if (!list->content)
             return (NULL);
         list->content_size = content_size;

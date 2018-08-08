@@ -20,6 +20,19 @@
 
 //Wt-16 + Delta0(Wt-15 ) + Wi-7 + Delta1(Wt-2 ), для t = 16..63
 
+void	print_debug(t_h *h)
+{
+	printf("%.8x %.8x %.8x %.8x %.8x %.8x %.8x %.8x\n",   (h->h0),
+									(h->h1),
+									(h->h2),
+									(h->h3),
+									(h->h4),
+									(h->h5),
+									(h->h6),
+									(h->h7)
+	);
+}
+
 void	prepare_message_schedule(t_info *info, int m[], int n)
 {
 	int 	i;
@@ -27,46 +40,80 @@ void	prepare_message_schedule(t_info *info, int m[], int n)
 	i = -1;
 	while (++i < 16)
 	{
-		m[i] = info->mass[n - 1][i];
-//		printf("%d %u\n",, m[i]);
+		m[i] = rev_bit(info->mass[n - 1][i]);
+		// printf("i = %d %08x\n",i, m[i]);
 	}
 	while (i < 64)
 	{
-		m[i] = m[i - 16] + delta0(m[i - 15]) + m[i - 7] + delta1(m[i - 2]);
+		m[i] = (m[i - 16] + delta0(m[i - 15]) + m[i - 7] + delta1(m[i - 2]));
 		++i;
 	}
 }
 void	initializ_tmp(t_h * tmp, t_h *start)
 {
-	tmp->h0 = start->h0;
-	tmp->h1 = start->h1;
-	tmp->h2 = start->h2;
-	tmp->h3 = start->h3;
-	tmp->h4 = start->h4;
-	tmp->h5 = start->h5;
-	tmp->h6 = start->h6;
-	tmp->h7 = start->h7;
+	tmp->h0 = (start->h0);	//	a
+	tmp->h1 = (start->h1);	//	b
+	tmp->h2 = (start->h2);	//	c
+	tmp->h3 = (start->h3);	//	d
+	tmp->h4 = (start->h4);	//	e
+	tmp->h5 = (start->h5);	//	f
+	tmp->h6 = (start->h6);	//	g
+	tmp->h7 = (start->h7);	//	h
+	
+		// print_debug(start);
+	// sleep(32);
 }
 
 void	internal_loop(t_h *tmp, int m[], t_info *info)
 {
 	int 	i;
-	unsigned int temp1;
-	unsigned int temp2;
+	unsigned long long temp1;
+	unsigned long long temp2;
 
 	i = -1;
 	while (++i < 64)
 	{
-		temp1 = tmp->h7 + sigma1(tmp->h4) + ch(tmp->h4, tmp->h5, tmp->h6) + m[i] + info->t[i];
-		temp2 = sigma0(tmp->h0) + maj(tmp->h0, tmp->h1, tmp->h2);
-		tmp->h7 = tmp->h6;
-		tmp->h6 = tmp->h5;
-		tmp->h5 = tmp->h4;
-		tmp->h4 = tmp->h3 + temp1;
-		tmp->h3 = tmp->h2;
-		tmp->h2 = tmp->h1;
-		tmp->h1 = tmp->h0;
-		tmp->h0 = temp1 + temp2;
+		// printf("%u\n", tmp->h7);
+		// printf("%u\n", sigma1(tmp->h4));
+		// printf("%u\n", ch(tmp->h4, tmp->h5, tmp->h6));
+		// printf("%u\n", m[i]);
+		// printf("%u\n", info->t[i]);
+
+		// temp1 =		(unsigned long long)(tmp->h7) + (sigma1(tmp->h4)) + (ch(tmp->h4, tmp->h5, tmp->h6)) + (m[i]) + (info->t[i]);
+		
+		temp1 = (unsigned long long)(tmp->h7) + (sigma1(tmp->h4));
+		temp1 %= 4294967296;
+		temp1 += ch(tmp->h4, tmp->h5, tmp->h6);
+		temp1 %= 4294967296;
+		temp1 += m[i];
+		temp1 %= 4294967296;
+		temp1 += info->t[i];
+		temp1 %= 4294967296;
+
+		temp2 = 	(unsigned long long)(sigma0(tmp->h0)) + (maj(tmp->h0, tmp->h1, tmp->h2));
+		temp2 %= 4294967296;
+
+
+		// printf("temp1= %llu %llu %u\n", temp1, temp2,  tmp->h2);
+		// sleep(32);
+		tmp->h7 = 	(tmp->h6);
+		tmp->h6 = 	(tmp->h5);
+		tmp->h5 = 	(tmp->h4);
+		tmp->h4 = 	(tmp->h3) + temp1;
+		tmp->h3 = 	(tmp->h2);
+		tmp->h2 = 	(tmp->h1);
+		tmp->h1 = 	(tmp->h0);
+		tmp->h0 = 	(temp1 + temp2);
+		// printf("%.8X %.8X %.8X %.8X %.8X %.8X %.8X %.8X\n",   (tmp->h0),
+		// 							(tmp->h1),
+		// 							(tmp->h2),
+		// 							(tmp->h3),
+		// 							(tmp->h4),
+		// 							(tmp->h5),
+		// 							(tmp->h6),
+		// 							(tmp->h7));
+		// sleep(43);
+
 	}
 }
 
@@ -83,18 +130,18 @@ void	intermediate(t_h * tmp, t_h *start)
 }
 
 
-void	print_res_sha256(t_h *h)
-{
-	printf("%.8x%.8x%.8x%.8x%.8x%.8x%.8x%.8x\n",    rev_bit(h->h0),
-									rev_bit(h->h1),
-									rev_bit(h->h2),
-									rev_bit(h->h3),
-									rev_bit(h->h4),
-									rev_bit(h->h5),
-									rev_bit(h->h6),
-									rev_bit(h->h7)
-	);
-}
+// void	print_res_sha256(t_h *h)
+// {
+// 	printf("%.8x%.8x%.8x%.8x%.8x%.8x%.8x%.8x\n",    (h->h0),
+// 									(h->h1),
+// 									(h->h2),
+// 									(h->h3),
+// 									(h->h4),
+// 									(h->h5),
+// 									(h->h6),
+// 									(h->h7)
+// 	);
+// }
 
 void	main_loop(t_info *info, t_h *h)
 {
@@ -115,6 +162,5 @@ void	main_loop(t_info *info, t_h *h)
 //		while (++j < 64)
 //			printf("%d %u\n",j, mass[j]);
 	}
-	print_res_sha256(h);
-
+	// print_res_sha256(h);
 }

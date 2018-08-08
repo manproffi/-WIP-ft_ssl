@@ -1,4 +1,5 @@
 .idea/vcs.xm
 .idea/workspace.xml
 .idea/*
-cmake*
+cmake-build-debug/*
+lib_folder/*
