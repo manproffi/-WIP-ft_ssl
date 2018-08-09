@@ -6,11 +6,13 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/sprotsen/ft_ssl/append_padding_bits.c" "/Users/sprotsen/ft_ssl/cmake-build-debug/CMakeFiles/ft_ssl.dir/append_padding_bits.c.o"
   "/Users/sprotsen/ft_ssl/append_padding_bits_256.c" "/Users/sprotsen/ft_ssl/cmake-build-debug/CMakeFiles/ft_ssl.dir/append_padding_bits_256.c.o"
+  "/Users/sprotsen/ft_ssl/append_padding_bits_512.c" "/Users/sprotsen/ft_ssl/cmake-build-debug/CMakeFiles/ft_ssl.dir/append_padding_bits_512.c.o"
   "/Users/sprotsen/ft_ssl/choice_algorithm_function.c" "/Users/sprotsen/ft_ssl/cmake-build-debug/CMakeFiles/ft_ssl.dir/choice_algorithm_function.c.o"
   "/Users/sprotsen/ft_ssl/control_s_flags.c" "/Users/sprotsen/ft_ssl/cmake-build-debug/CMakeFiles/ft_ssl.dir/control_s_flags.c.o"
   "/Users/sprotsen/ft_ssl/fill_content.c" "/Users/sprotsen/ft_ssl/cmake-build-debug/CMakeFiles/ft_ssl.dir/fill_content.c.o"
   "/Users/sprotsen/ft_ssl/fun.c" "/Users/sprotsen/ft_ssl/cmake-build-debug/CMakeFiles/ft_ssl.dir/fun.c.o"
   "/Users/sprotsen/ft_ssl/fun_256.c" "/Users/sprotsen/ft_ssl/cmake-build-debug/CMakeFiles/ft_ssl.dir/fun_256.c.o"
+  "/Users/sprotsen/ft_ssl/fun_512.c" "/Users/sprotsen/ft_ssl/cmake-build-debug/CMakeFiles/ft_ssl.dir/fun_512.c.o"
   "/Users/sprotsen/ft_ssl/fun_round.c" "/Users/sprotsen/ft_ssl/cmake-build-debug/CMakeFiles/ft_ssl.dir/fun_round.c.o"
   "/Users/sprotsen/ft_ssl/lib_folder/libft/ft_atoi.c" "/Users/sprotsen/ft_ssl/cmake-build-debug/CMakeFiles/ft_ssl.dir/lib_folder/libft/ft_atoi.c.o"
   "/Users/sprotsen/ft_ssl/lib_folder/libft/ft_atoi_ulli.c" "/Users/sprotsen/ft_ssl/cmake-build-debug/CMakeFiles/ft_ssl.dir/lib_folder/libft/ft_atoi_ulli.c.o"
@@ -79,6 +81,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/sprotsen/ft_ssl/lib_folder/libft/get_next_line.c" "/Users/sprotsen/ft_ssl/cmake-build-debug/CMakeFiles/ft_ssl.dir/lib_folder/libft/get_next_line.c.o"
   "/Users/sprotsen/ft_ssl/main.c" "/Users/sprotsen/ft_ssl/cmake-build-debug/CMakeFiles/ft_ssl.dir/main.c.o"
   "/Users/sprotsen/ft_ssl/main_loop.c" "/Users/sprotsen/ft_ssl/cmake-build-debug/CMakeFiles/ft_ssl.dir/main_loop.c.o"
+  "/Users/sprotsen/ft_ssl/main_loop_512.c" "/Users/sprotsen/ft_ssl/cmake-build-debug/CMakeFiles/ft_ssl.dir/main_loop_512.c.o"
   "/Users/sprotsen/ft_ssl/md5_algo.c" "/Users/sprotsen/ft_ssl/cmake-build-debug/CMakeFiles/ft_ssl.dir/md5_algo.c.o"
   "/Users/sprotsen/ft_ssl/parsing_command.c" "/Users/sprotsen/ft_ssl/cmake-build-debug/CMakeFiles/ft_ssl.dir/parsing_command.c.o"
   "/Users/sprotsen/ft_ssl/pre_parsing_flags.c" "/Users/sprotsen/ft_ssl/cmake-build-debug/CMakeFiles/ft_ssl.dir/pre_parsing_flags.c.o"
@@ -87,6 +90,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/sprotsen/ft_ssl/read_file.c" "/Users/sprotsen/ft_ssl/cmake-build-debug/CMakeFiles/ft_ssl.dir/read_file.c.o"
   "/Users/sprotsen/ft_ssl/read_screen.c" "/Users/sprotsen/ft_ssl/cmake-build-debug/CMakeFiles/ft_ssl.dir/read_screen.c.o"
   "/Users/sprotsen/ft_ssl/sha256_algo.c" "/Users/sprotsen/ft_ssl/cmake-build-debug/CMakeFiles/ft_ssl.dir/sha256_algo.c.o"
+  "/Users/sprotsen/ft_ssl/sha512_algo.c" "/Users/sprotsen/ft_ssl/cmake-build-debug/CMakeFiles/ft_ssl.dir/sha512_algo.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

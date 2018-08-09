@@ -86,6 +86,9 @@
 		<Unit filename="/Users/sprotsen/ft_ssl/append_padding_bits_256.c">
 			<Option target="ft_ssl"/>
 		</Unit>
+		<Unit filename="/Users/sprotsen/ft_ssl/append_padding_bits_512.c">
+			<Option target="ft_ssl"/>
+		</Unit>
 		<Unit filename="/Users/sprotsen/ft_ssl/choice_algorithm_function.c">
 			<Option target="ft_ssl"/>
 		</Unit>
@@ -99,6 +102,9 @@
 			<Option target="ft_ssl"/>
 		</Unit>
 		<Unit filename="/Users/sprotsen/ft_ssl/fun_256.c">
+			<Option target="ft_ssl"/>
+		</Unit>
+		<Unit filename="/Users/sprotsen/ft_ssl/fun_512.c">
 			<Option target="ft_ssl"/>
 		</Unit>
 		<Unit filename="/Users/sprotsen/ft_ssl/fun_round.c">
@@ -311,6 +317,9 @@
 		<Unit filename="/Users/sprotsen/ft_ssl/main_loop.c">
 			<Option target="ft_ssl"/>
 		</Unit>
+		<Unit filename="/Users/sprotsen/ft_ssl/main_loop_512.c">
+			<Option target="ft_ssl"/>
+		</Unit>
 		<Unit filename="/Users/sprotsen/ft_ssl/md5_algo.c">
 			<Option target="ft_ssl"/>
 		</Unit>
@@ -333,6 +342,9 @@
 			<Option target="ft_ssl"/>
 		</Unit>
 		<Unit filename="/Users/sprotsen/ft_ssl/sha256_algo.c">
+			<Option target="ft_ssl"/>
+		</Unit>
+		<Unit filename="/Users/sprotsen/ft_ssl/sha512_algo.c">
 			<Option target="ft_ssl"/>
 		</Unit>
 		<Unit filename="/Users/sprotsen/ft_ssl/CMakeLists.txt">

@@ -36,7 +36,7 @@ OBJ = $(SRC:.c=.o)
 all:	$(NAME)
 
 $(NAME): lib $(OBJ) head_ssl.h
-	gcc $(FLAG) $(OBJ) -o $(NAME) $(LIB_ALL)
+	gcc $(FLAG) $(OBJ) -o $(NAME) $(LIB_ALL) 
 
 %.o: %.c head_ssl.h
 	gcc $(FLAG) -c -o $@ $<

@@ -92,4 +92,8 @@ add_executable(ft_ssl
         fun_256.c
         main_loop.c
         print_res_sha256.c
+        append_padding_bits_512.c
+        fun_512.c
+        main_loop_512.c
+        sha512_algo.c
         )

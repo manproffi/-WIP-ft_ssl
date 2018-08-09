@@ -2049,6 +2049,102 @@ CMakeFiles/ft_ssl.dir/print_res_sha256.c.o.provides: CMakeFiles/ft_ssl.dir/print
 CMakeFiles/ft_ssl.dir/print_res_sha256.c.o.provides.build: CMakeFiles/ft_ssl.dir/print_res_sha256.c.o
 
 
+CMakeFiles/ft_ssl.dir/append_padding_bits_512.c.o: CMakeFiles/ft_ssl.dir/flags.make
+CMakeFiles/ft_ssl.dir/append_padding_bits_512.c.o: ../append_padding_bits_512.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sprotsen/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building C object CMakeFiles/ft_ssl.dir/append_padding_bits_512.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ssl.dir/append_padding_bits_512.c.o   -c /Users/sprotsen/ft_ssl/append_padding_bits_512.c
+
+CMakeFiles/ft_ssl.dir/append_padding_bits_512.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_ssl.dir/append_padding_bits_512.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/sprotsen/ft_ssl/append_padding_bits_512.c > CMakeFiles/ft_ssl.dir/append_padding_bits_512.c.i
+
+CMakeFiles/ft_ssl.dir/append_padding_bits_512.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_ssl.dir/append_padding_bits_512.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/sprotsen/ft_ssl/append_padding_bits_512.c -o CMakeFiles/ft_ssl.dir/append_padding_bits_512.c.s
+
+CMakeFiles/ft_ssl.dir/append_padding_bits_512.c.o.requires:
+
+.PHONY : CMakeFiles/ft_ssl.dir/append_padding_bits_512.c.o.requires
+
+CMakeFiles/ft_ssl.dir/append_padding_bits_512.c.o.provides: CMakeFiles/ft_ssl.dir/append_padding_bits_512.c.o.requires
+	$(MAKE) -f CMakeFiles/ft_ssl.dir/build.make CMakeFiles/ft_ssl.dir/append_padding_bits_512.c.o.provides.build
+.PHONY : CMakeFiles/ft_ssl.dir/append_padding_bits_512.c.o.provides
+
+CMakeFiles/ft_ssl.dir/append_padding_bits_512.c.o.provides.build: CMakeFiles/ft_ssl.dir/append_padding_bits_512.c.o
+
+
+CMakeFiles/ft_ssl.dir/fun_512.c.o: CMakeFiles/ft_ssl.dir/flags.make
+CMakeFiles/ft_ssl.dir/fun_512.c.o: ../fun_512.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sprotsen/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building C object CMakeFiles/ft_ssl.dir/fun_512.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ssl.dir/fun_512.c.o   -c /Users/sprotsen/ft_ssl/fun_512.c
+
+CMakeFiles/ft_ssl.dir/fun_512.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_ssl.dir/fun_512.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/sprotsen/ft_ssl/fun_512.c > CMakeFiles/ft_ssl.dir/fun_512.c.i
+
+CMakeFiles/ft_ssl.dir/fun_512.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_ssl.dir/fun_512.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/sprotsen/ft_ssl/fun_512.c -o CMakeFiles/ft_ssl.dir/fun_512.c.s
+
+CMakeFiles/ft_ssl.dir/fun_512.c.o.requires:
+
+.PHONY : CMakeFiles/ft_ssl.dir/fun_512.c.o.requires
+
+CMakeFiles/ft_ssl.dir/fun_512.c.o.provides: CMakeFiles/ft_ssl.dir/fun_512.c.o.requires
+	$(MAKE) -f CMakeFiles/ft_ssl.dir/build.make CMakeFiles/ft_ssl.dir/fun_512.c.o.provides.build
+.PHONY : CMakeFiles/ft_ssl.dir/fun_512.c.o.provides
+
+CMakeFiles/ft_ssl.dir/fun_512.c.o.provides.build: CMakeFiles/ft_ssl.dir/fun_512.c.o
+
+
+CMakeFiles/ft_ssl.dir/main_loop_512.c.o: CMakeFiles/ft_ssl.dir/flags.make
+CMakeFiles/ft_ssl.dir/main_loop_512.c.o: ../main_loop_512.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sprotsen/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building C object CMakeFiles/ft_ssl.dir/main_loop_512.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ssl.dir/main_loop_512.c.o   -c /Users/sprotsen/ft_ssl/main_loop_512.c
+
+CMakeFiles/ft_ssl.dir/main_loop_512.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_ssl.dir/main_loop_512.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/sprotsen/ft_ssl/main_loop_512.c > CMakeFiles/ft_ssl.dir/main_loop_512.c.i
+
+CMakeFiles/ft_ssl.dir/main_loop_512.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_ssl.dir/main_loop_512.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/sprotsen/ft_ssl/main_loop_512.c -o CMakeFiles/ft_ssl.dir/main_loop_512.c.s
+
+CMakeFiles/ft_ssl.dir/main_loop_512.c.o.requires:
+
+.PHONY : CMakeFiles/ft_ssl.dir/main_loop_512.c.o.requires
+
+CMakeFiles/ft_ssl.dir/main_loop_512.c.o.provides: CMakeFiles/ft_ssl.dir/main_loop_512.c.o.requires
+	$(MAKE) -f CMakeFiles/ft_ssl.dir/build.make CMakeFiles/ft_ssl.dir/main_loop_512.c.o.provides.build
+.PHONY : CMakeFiles/ft_ssl.dir/main_loop_512.c.o.provides
+
+CMakeFiles/ft_ssl.dir/main_loop_512.c.o.provides.build: CMakeFiles/ft_ssl.dir/main_loop_512.c.o
+
+
+CMakeFiles/ft_ssl.dir/sha512_algo.c.o: CMakeFiles/ft_ssl.dir/flags.make
+CMakeFiles/ft_ssl.dir/sha512_algo.c.o: ../sha512_algo.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sprotsen/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building C object CMakeFiles/ft_ssl.dir/sha512_algo.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ssl.dir/sha512_algo.c.o   -c /Users/sprotsen/ft_ssl/sha512_algo.c
+
+CMakeFiles/ft_ssl.dir/sha512_algo.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_ssl.dir/sha512_algo.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/sprotsen/ft_ssl/sha512_algo.c > CMakeFiles/ft_ssl.dir/sha512_algo.c.i
+
+CMakeFiles/ft_ssl.dir/sha512_algo.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_ssl.dir/sha512_algo.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/sprotsen/ft_ssl/sha512_algo.c -o CMakeFiles/ft_ssl.dir/sha512_algo.c.s
+
+CMakeFiles/ft_ssl.dir/sha512_algo.c.o.requires:
+
+.PHONY : CMakeFiles/ft_ssl.dir/sha512_algo.c.o.requires
+
+CMakeFiles/ft_ssl.dir/sha512_algo.c.o.provides: CMakeFiles/ft_ssl.dir/sha512_algo.c.o.requires
+	$(MAKE) -f CMakeFiles/ft_ssl.dir/build.make CMakeFiles/ft_ssl.dir/sha512_algo.c.o.provides.build
+.PHONY : CMakeFiles/ft_ssl.dir/sha512_algo.c.o.provides
+
+CMakeFiles/ft_ssl.dir/sha512_algo.c.o.provides.build: CMakeFiles/ft_ssl.dir/sha512_algo.c.o
+
+
 # Object files for target ft_ssl
 ft_ssl_OBJECTS = \
 "CMakeFiles/ft_ssl.dir/lib_folder/libft/ft_atoi.c.o" \
@@ -2133,7 +2229,11 @@ ft_ssl_OBJECTS = \
 "CMakeFiles/ft_ssl.dir/append_padding_bits_256.c.o" \
 "CMakeFiles/ft_ssl.dir/fun_256.c.o" \
 "CMakeFiles/ft_ssl.dir/main_loop.c.o" \
-"CMakeFiles/ft_ssl.dir/print_res_sha256.c.o"
+"CMakeFiles/ft_ssl.dir/print_res_sha256.c.o" \
+"CMakeFiles/ft_ssl.dir/append_padding_bits_512.c.o" \
+"CMakeFiles/ft_ssl.dir/fun_512.c.o" \
+"CMakeFiles/ft_ssl.dir/main_loop_512.c.o" \
+"CMakeFiles/ft_ssl.dir/sha512_algo.c.o"
 
 # External object files for target ft_ssl
 ft_ssl_EXTERNAL_OBJECTS =
@@ -2221,9 +2321,13 @@ ft_ssl: CMakeFiles/ft_ssl.dir/append_padding_bits_256.c.o
 ft_ssl: CMakeFiles/ft_ssl.dir/fun_256.c.o
 ft_ssl: CMakeFiles/ft_ssl.dir/main_loop.c.o
 ft_ssl: CMakeFiles/ft_ssl.dir/print_res_sha256.c.o
+ft_ssl: CMakeFiles/ft_ssl.dir/append_padding_bits_512.c.o
+ft_ssl: CMakeFiles/ft_ssl.dir/fun_512.c.o
+ft_ssl: CMakeFiles/ft_ssl.dir/main_loop_512.c.o
+ft_ssl: CMakeFiles/ft_ssl.dir/sha512_algo.c.o
 ft_ssl: CMakeFiles/ft_ssl.dir/build.make
 ft_ssl: CMakeFiles/ft_ssl.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/sprotsen/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Linking C executable ft_ssl"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/sprotsen/ft_ssl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Linking C executable ft_ssl"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ft_ssl.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -2314,6 +2418,10 @@ CMakeFiles/ft_ssl.dir/requires: CMakeFiles/ft_ssl.dir/append_padding_bits_256.c.
 CMakeFiles/ft_ssl.dir/requires: CMakeFiles/ft_ssl.dir/fun_256.c.o.requires
 CMakeFiles/ft_ssl.dir/requires: CMakeFiles/ft_ssl.dir/main_loop.c.o.requires
 CMakeFiles/ft_ssl.dir/requires: CMakeFiles/ft_ssl.dir/print_res_sha256.c.o.requires
+CMakeFiles/ft_ssl.dir/requires: CMakeFiles/ft_ssl.dir/append_padding_bits_512.c.o.requires
+CMakeFiles/ft_ssl.dir/requires: CMakeFiles/ft_ssl.dir/fun_512.c.o.requires
+CMakeFiles/ft_ssl.dir/requires: CMakeFiles/ft_ssl.dir/main_loop_512.c.o.requires
+CMakeFiles/ft_ssl.dir/requires: CMakeFiles/ft_ssl.dir/sha512_algo.c.o.requires
 
 .PHONY : CMakeFiles/ft_ssl.dir/requires
 

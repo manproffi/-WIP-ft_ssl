@@ -65,7 +65,7 @@ void	initializ_tmp(t_h * tmp, t_h *start)
 	// sleep(32);
 }
 
-unsigned long long internal_loop_part(t_h *tmp, int m[], t_info *info, int i)
+unsigned long long internal_loop_part(t_h *tmp, unsigned int m[], t_info *info, int i)
 {
 	unsigned long long temp1;
 
@@ -80,7 +80,7 @@ unsigned long long internal_loop_part(t_h *tmp, int m[], t_info *info, int i)
 	return (temp1);
 }
 
-void	internal_loop(t_h *tmp, int m[], t_info *info)
+void	internal_loop(t_h *tmp, unsigned int m[], t_info *info)
 {
 	int 	i;
 	unsigned long long temp1;

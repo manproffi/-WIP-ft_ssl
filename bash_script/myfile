@@ -1,5 +1,3 @@
-Process 74039: 160 nodes malloced for 17 KB
-Process 74039: 0 leaks for 0 total leaked bytes.
 2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824  hello
 0
 09b444223b3c73c607df684f42ebc4971692de34aa382fd4a28e26079b899471  test

@@ -127,7 +127,7 @@ void	lstaddend(t_flags **alst, t_flags *new);
 t_flags *lstnew(const char *content, size_t content_size, char c);
 void	del_list_list(t_flags **list);
 void	main_loop(t_info *info, t_h *h);
-void    main_loop_512(t_info *info, t_h *h);
+void    main_loop_512(t_info *info, t_512 *h);
 
 unsigned int    fun_f(unsigned int x, unsigned int y, unsigned int z);
 unsigned int    fun_g(unsigned int x, unsigned int y, unsigned int z);

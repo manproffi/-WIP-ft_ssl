@@ -16,7 +16,7 @@ static void	initialization_h_num(t_512 *rhs)
 
 static void	initialization_k_part3(t_info *info, int i)
 {
-	static ULLI k_third_part[] = {
+	static const ULLI k_third_part[18] = {
 		0xbef9a3f7b2c67915, 0xc67178f2e372532b,
 		0xca273eceea26619c, 0xd186b8c721c0c207,
 		0xeada7dd6cde0eb1e, 0xf57d4f7fee6ed178,
@@ -28,12 +28,15 @@ static void	initialization_k_part3(t_info *info, int i)
 		0x5fcb6fab3ad6faec, 0x6c44198c4a475817
 	};
 	while (++i < 80)
-        info->k[i] = k_third_part[i];
+	{
+        info->k[i] = k_third_part[i - 62];
+//		printf(">>>+++%d %llx\n", i, info->k[i]);
+	}
 }
 
 static void	initialization_k_part2(t_info *info, int i)
 {
-	static ULLI k_second_part[] = {
+	static const ULLI k_second_part[30] = {
 		0x27b70a8546d22ffc, 0x2e1b21385c26c926,
 		0x4d2c6dfc5ac42aed, 0x53380d139d95b3df,
 		0x650a73548baf63de, 0x766a0abb3c77b2a8,
@@ -52,13 +55,17 @@ static void	initialization_k_part2(t_info *info, int i)
 	};
 
 	while (++i < 62)
-		info->k[i] = k_second_part[i];
+	{
+		info->k[i] = k_second_part[i - 32];
+//		printf(">>> +++ %d %llx\n", i, info->k[i]);
+	}
+
 	initialization_k_part3(info, i - 1);
 }
 
 static void initialization_k(t_info *info)
 {
-	static ULLI k_first_part[] = {
+	static const ULLI k_first_part[32] = {
 		0x428a2f98d728ae22, 0x7137449123ef65cd,
 		0xb5c0fbcfec4d3b2f, 0xe9b5dba58189dbbc,
 		0x3956c25bf348b538, 0x59f111f1b605d019,
@@ -80,7 +87,10 @@ static void initialization_k(t_info *info)
 
     i = -1;
     while (++i < 32)
-        info->k[i] = k_first_part[i];
+	{
+		info->k[i] = k_first_part[i];
+//		printf(">>>%d %llx\n", i, info->k[i]);
+	}
     initialization_k_part2(info, i - 1);
 }
 
@@ -97,21 +107,21 @@ void    sha512_algo(t_info *info, const char *string, const char *filename)
 
 
 
-	///******* debug *******///
-	printf("string: %s\n", string);
-    int k = -1;
-    while (++k < info->n)
-    {
-        int i = -1;
-        while (++i < 16)
-        {
-            unsigned char *str = (unsigned char*)&(info)->mass_512[k][i];
-            printf("%02x%02x%02x%02x%02x%02x%02x%02x\n", str[0], str[1], str[2], str[3], 
-            	str[4], str[5], str[6], str[7]);
-        }
-    }
+//	///******* debug *******///
+//	printf("string: %s\n", string);
+//    int k = -1;
+//    while (++k < info->n)
+//    {
+//        int i = -1;
+//        while (++i < 16)
+//        {
+//            unsigned char *str = (unsigned char*)&(info)->mass_512[k][i];
+//            printf("%02x%02x%02x%02x%02x%02x%02x%02x\n", str[0], str[1], str[2], str[3],
+//            	str[4], str[5], str[6], str[7]);
+//        }
+//    }
 
-    int j = -1;
-    while (++j < 80)
-    	printf("%llu\n", info->k[j]);
+//	int j = -1;
+//	while (++j < 80)
+//		printf("****%llu\n", info->k[j]);
 }

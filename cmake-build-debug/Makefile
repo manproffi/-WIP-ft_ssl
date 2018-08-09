@@ -177,6 +177,33 @@ append_padding_bits_256.c.s:
 	$(MAKE) -f CMakeFiles/ft_ssl.dir/build.make CMakeFiles/ft_ssl.dir/append_padding_bits_256.c.s
 .PHONY : append_padding_bits_256.c.s
 
+append_padding_bits_512.o: append_padding_bits_512.c.o
+
+.PHONY : append_padding_bits_512.o
+
+# target to build an object file
+append_padding_bits_512.c.o:
+	$(MAKE) -f CMakeFiles/ft_ssl.dir/build.make CMakeFiles/ft_ssl.dir/append_padding_bits_512.c.o
+.PHONY : append_padding_bits_512.c.o
+
+append_padding_bits_512.i: append_padding_bits_512.c.i
+
+.PHONY : append_padding_bits_512.i
+
+# target to preprocess a source file
+append_padding_bits_512.c.i:
+	$(MAKE) -f CMakeFiles/ft_ssl.dir/build.make CMakeFiles/ft_ssl.dir/append_padding_bits_512.c.i
+.PHONY : append_padding_bits_512.c.i
+
+append_padding_bits_512.s: append_padding_bits_512.c.s
+
+.PHONY : append_padding_bits_512.s
+
+# target to generate assembly for a file
+append_padding_bits_512.c.s:
+	$(MAKE) -f CMakeFiles/ft_ssl.dir/build.make CMakeFiles/ft_ssl.dir/append_padding_bits_512.c.s
+.PHONY : append_padding_bits_512.c.s
+
 choice_algorithm_function.o: choice_algorithm_function.c.o
 
 .PHONY : choice_algorithm_function.o
@@ -311,6 +338,33 @@ fun_256.s: fun_256.c.s
 fun_256.c.s:
 	$(MAKE) -f CMakeFiles/ft_ssl.dir/build.make CMakeFiles/ft_ssl.dir/fun_256.c.s
 .PHONY : fun_256.c.s
+
+fun_512.o: fun_512.c.o
+
+.PHONY : fun_512.o
+
+# target to build an object file
+fun_512.c.o:
+	$(MAKE) -f CMakeFiles/ft_ssl.dir/build.make CMakeFiles/ft_ssl.dir/fun_512.c.o
+.PHONY : fun_512.c.o
+
+fun_512.i: fun_512.c.i
+
+.PHONY : fun_512.i
+
+# target to preprocess a source file
+fun_512.c.i:
+	$(MAKE) -f CMakeFiles/ft_ssl.dir/build.make CMakeFiles/ft_ssl.dir/fun_512.c.i
+.PHONY : fun_512.c.i
+
+fun_512.s: fun_512.c.s
+
+.PHONY : fun_512.s
+
+# target to generate assembly for a file
+fun_512.c.s:
+	$(MAKE) -f CMakeFiles/ft_ssl.dir/build.make CMakeFiles/ft_ssl.dir/fun_512.c.s
+.PHONY : fun_512.c.s
 
 fun_round.o: fun_round.c.o
 
@@ -2148,6 +2202,33 @@ main_loop.c.s:
 	$(MAKE) -f CMakeFiles/ft_ssl.dir/build.make CMakeFiles/ft_ssl.dir/main_loop.c.s
 .PHONY : main_loop.c.s
 
+main_loop_512.o: main_loop_512.c.o
+
+.PHONY : main_loop_512.o
+
+# target to build an object file
+main_loop_512.c.o:
+	$(MAKE) -f CMakeFiles/ft_ssl.dir/build.make CMakeFiles/ft_ssl.dir/main_loop_512.c.o
+.PHONY : main_loop_512.c.o
+
+main_loop_512.i: main_loop_512.c.i
+
+.PHONY : main_loop_512.i
+
+# target to preprocess a source file
+main_loop_512.c.i:
+	$(MAKE) -f CMakeFiles/ft_ssl.dir/build.make CMakeFiles/ft_ssl.dir/main_loop_512.c.i
+.PHONY : main_loop_512.c.i
+
+main_loop_512.s: main_loop_512.c.s
+
+.PHONY : main_loop_512.s
+
+# target to generate assembly for a file
+main_loop_512.c.s:
+	$(MAKE) -f CMakeFiles/ft_ssl.dir/build.make CMakeFiles/ft_ssl.dir/main_loop_512.c.s
+.PHONY : main_loop_512.c.s
+
 md5_algo.o: md5_algo.c.o
 
 .PHONY : md5_algo.o
@@ -2364,6 +2445,33 @@ sha256_algo.c.s:
 	$(MAKE) -f CMakeFiles/ft_ssl.dir/build.make CMakeFiles/ft_ssl.dir/sha256_algo.c.s
 .PHONY : sha256_algo.c.s
 
+sha512_algo.o: sha512_algo.c.o
+
+.PHONY : sha512_algo.o
+
+# target to build an object file
+sha512_algo.c.o:
+	$(MAKE) -f CMakeFiles/ft_ssl.dir/build.make CMakeFiles/ft_ssl.dir/sha512_algo.c.o
+.PHONY : sha512_algo.c.o
+
+sha512_algo.i: sha512_algo.c.i
+
+.PHONY : sha512_algo.i
+
+# target to preprocess a source file
+sha512_algo.c.i:
+	$(MAKE) -f CMakeFiles/ft_ssl.dir/build.make CMakeFiles/ft_ssl.dir/sha512_algo.c.i
+.PHONY : sha512_algo.c.i
+
+sha512_algo.s: sha512_algo.c.s
+
+.PHONY : sha512_algo.s
+
+# target to generate assembly for a file
+sha512_algo.c.s:
+	$(MAKE) -f CMakeFiles/ft_ssl.dir/build.make CMakeFiles/ft_ssl.dir/sha512_algo.c.s
+.PHONY : sha512_algo.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -2379,6 +2487,9 @@ help:
 	@echo "... append_padding_bits_256.o"
 	@echo "... append_padding_bits_256.i"
 	@echo "... append_padding_bits_256.s"
+	@echo "... append_padding_bits_512.o"
+	@echo "... append_padding_bits_512.i"
+	@echo "... append_padding_bits_512.s"
 	@echo "... choice_algorithm_function.o"
 	@echo "... choice_algorithm_function.i"
 	@echo "... choice_algorithm_function.s"
@@ -2394,6 +2505,9 @@ help:
 	@echo "... fun_256.o"
 	@echo "... fun_256.i"
 	@echo "... fun_256.s"
+	@echo "... fun_512.o"
+	@echo "... fun_512.i"
+	@echo "... fun_512.s"
 	@echo "... fun_round.o"
 	@echo "... fun_round.i"
 	@echo "... fun_round.s"
@@ -2598,6 +2712,9 @@ help:
 	@echo "... main_loop.o"
 	@echo "... main_loop.i"
 	@echo "... main_loop.s"
+	@echo "... main_loop_512.o"
+	@echo "... main_loop_512.i"
+	@echo "... main_loop_512.s"
 	@echo "... md5_algo.o"
 	@echo "... md5_algo.i"
 	@echo "... md5_algo.s"
@@ -2622,6 +2739,9 @@ help:
 	@echo "... sha256_algo.o"
 	@echo "... sha256_algo.i"
 	@echo "... sha256_algo.s"
+	@echo "... sha512_algo.o"
+	@echo "... sha512_algo.i"
+	@echo "... sha512_algo.s"
 .PHONY : help
 
 

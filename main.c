@@ -50,5 +50,13 @@ int main(int argc, char const *argv[])
         printf("Message Digest commands:\nmd5\nsha256\n");
     }
     // system("leaks ft_ssl -q");
+    // printf("%f\n", fmod(4.99999990, 2));
+    // printf("%d\n", (int)fmod(4.99999990, 2));
+    // unsigned char a = 250;
+    // unsigned char b = 125;
+    // unsigned char c = a + b;
+    // printf("%d\n", c);
+    // printf("%f\n", fmod(375,256));
+    		
 	return 0;
 }
