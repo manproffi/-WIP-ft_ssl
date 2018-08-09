@@ -33,7 +33,7 @@ void	print_debug(t_h *h)
 	);
 }
 
-void	prepare_message_schedule(t_info *info, int m[], int n)
+void	prepare_message_schedule(t_info *info, unsigned int m[], int n)
 {
 	int 	i;
 
@@ -49,6 +49,7 @@ void	prepare_message_schedule(t_info *info, int m[], int n)
 		++i;
 	}
 }
+
 void	initializ_tmp(t_h * tmp, t_h *start)
 {
 	tmp->h0 = (start->h0);	//	a
@@ -134,7 +135,7 @@ void	intermediate(t_h * tmp, t_h *start)
 void	main_loop(t_info *info, t_h *h)
 {
 	size_t 	i;
-	int mass[64];
+	unsigned int mass[64];
 	t_h 	tmp;
 
 	i = 0;

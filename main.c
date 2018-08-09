@@ -37,7 +37,8 @@ int main(int argc, char const *argv[])
 	initialization_info(&info);
 	if (argc == 1)
 		printf("usage: ft_ssl command [command opts] [command args]\n");
-	else if (ft_strcmp(argv[1], "md5") == 0 || strcmp(argv[1], "sha256") == 0)
+	else if (ft_strcmp(argv[1], "md5") == 0 || strcmp(argv[1], "sha256") == 0
+        || ft_strcmp(argv[1], "sha512") == 0)
     {
         info.algo_name = ft_strdup(argv[1]);
         pre_parsing_flags(argc, argv, &info);
@@ -48,6 +49,6 @@ int main(int argc, char const *argv[])
         printf("ft_ssl: Error: '%s' is an invalid command.\n", argv[1]);
         printf("Message Digest commands:\nmd5\nsha256\n");
     }
-    system("leaks ft_ssl -q");
+    // system("leaks ft_ssl -q");
 	return 0;
 }

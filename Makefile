@@ -26,7 +26,8 @@ SRC = main.c parsing_command.c \
     md5_algo.c append_padding_bits.c fun.c fun_round.c read_screen.c read_file.c \
     print_result.c  pre_parsing_flags.c control_s_flags.c fill_content.c \
     choice_algorithm_function.c sha256_algo.c append_padding_bits_256.c fun_256.c \
-    main_loop.c print_res_sha256.c
+    main_loop.c print_res_sha256.c sha512_algo.c append_padding_bits_512.c \
+    main_loop_512.c fun_512.c
  
 OBJ = $(SRC:.c=.o)
 

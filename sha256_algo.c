@@ -54,7 +54,7 @@ static void	initialization_t(t_info *info)
         info->t[i] = k[i];
 }
 
-void	initialization_h_num(t_h *rhs)
+static void	initialization_h_num(t_h *rhs)
 {
 	rhs->h0 = 0x6a09e667;
 	rhs->h1 = 0xbb67ae85;

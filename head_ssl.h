@@ -20,6 +20,8 @@
 #include <sys/stat.h>
 
 #include <stdio.h> //delete
+
+#define ULLI unsigned long long int
 //
 //typedef struct      s_block
 //{
@@ -40,6 +42,19 @@
 //    int             b14;
 //    int             b15;
 //}                   t_block;
+
+typedef struct      s_512
+{
+    unsigned long long int    h0;
+    unsigned long long int    h1;
+    unsigned long long int    h2;
+    unsigned long long int    h3;
+    unsigned long long int    h4;
+    unsigned long long int    h5;
+    unsigned long long int    h6;
+    unsigned long long int    h7;
+}                   t_512;
+
 
 typedef struct      s_h_num
 {
@@ -74,6 +89,8 @@ typedef struct 		s_info
 
     size_t          n;
     unsigned int    **mass;
+    unsigned long long int **mass_512;
+
 
 
     unsigned int    a;
@@ -82,6 +99,7 @@ typedef struct 		s_info
     unsigned int    d;
 
     unsigned int    t[65];
+    unsigned long long int k[80];
 
     struct s_flags  *new_flags;
 }					t_info;
@@ -93,6 +111,7 @@ void    md5_algo(t_info *info, const char *string, const char *filename);
 void    sha256_algo(t_info *info, const char *string, const char *filename);
 void    append_padding_bits(t_info *info, const char *string);
 void    append_padding_bits_256(t_info *info, const char *string);
+void    append_padding_bits_512(t_info *info, const char *string);
 void	read_screen(t_info *info, int flag_p);
 void    read_file(t_info *info, const char *name);
 void    print_result(t_info * info, const char *str, const char *filename);
@@ -101,12 +120,14 @@ int    pre_parsing_flags(int argc, const char *argv[], t_info *info);
 void    fill_content(int argc, const char *argv[], t_info *info);
 void    choice_alg_fun(t_info *info, const char *string, const char *filename);
 void    print_res_sha256(t_info *info, const char *str,  const char *filename, t_h *h);
+void    sha512_algo(t_info *info, const char *string, const char *filename);
 
 
 void	lstaddend(t_flags **alst, t_flags *new);
 t_flags *lstnew(const char *content, size_t content_size, char c);
 void	del_list_list(t_flags **list);
 void	main_loop(t_info *info, t_h *h);
+void    main_loop_512(t_info *info, t_h *h);
 
 unsigned int    fun_f(unsigned int x, unsigned int y, unsigned int z);
 unsigned int    fun_g(unsigned int x, unsigned int y, unsigned int z);
@@ -127,6 +148,19 @@ unsigned int    sigma0(unsigned int x);
 unsigned int    sigma1(unsigned int x);
 unsigned int    delta0(unsigned int x);
 unsigned int    delta1(unsigned int x);
+
+ULLI    rotr_64(ULLI  x, int n);
+ULLI    shr_64(ULLI  x, int n);
+ULLI    ch_64(ULLI  x, ULLI  y, ULLI  z);
+ULLI    maj_64(ULLI x, ULLI y, ULLI  z);
+ULLI    sigma0_64(ULLI x);
+ULLI    sigma1_64(ULLI x);
+ULLI    delta0_64(ULLI x);
+ULLI    delta1_64(ULLI x);
+ULLI rev_bit_512(ULLI a);
+
+
+
 
 
 

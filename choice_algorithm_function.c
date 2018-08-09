@@ -18,6 +18,8 @@ void    choice_alg_fun(t_info *info, const char *string, const char *filename)
         md5_algo(info, string, filename);
     else if (ft_strcmp(info->algo_name, "sha256") == 0)
         sha256_algo(info, string, filename);
+    else if (ft_strcmp(info->algo_name, "sha512") == 0)
+    	sha512_algo(info, string, filename);
     else
         printf("YYYYPPPPS\n\n\n");
 }
