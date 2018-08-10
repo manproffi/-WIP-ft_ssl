@@ -4,18 +4,18 @@
 
 
 
-void	print_res_sha512_debug(t_512 *h)
-{
-	printf("%.8llx %.8llx %.8llx %.8llx %.8llx %.8llx %.8llx %.8llx\n",    (h->h0),
-		   (h->h1),
-		   (h->h2),
-		   (h->h3),
-		   (h->h4),
-		   (h->h5),
-		   (h->h6),
-		   (h->h7)
-	);
-}
+// void	print_res_sha512_debug(t_512 *h)
+// {
+// 	printf("%.8llx %.8llx %.8llx %.8llx %.8llx %.8llx %.8llx %.8llx\n",    (h->h0),
+// 		   (h->h1),
+// 		   (h->h2),
+// 		   (h->h3),
+// 		   (h->h4),
+// 		   (h->h5),
+// 		   (h->h6),
+// 		   (h->h7)
+// 	);
+// }
 
 
 
@@ -105,18 +105,18 @@ void	intermediate_512(t_512 * tmp, t_512 *start)
 	start->h7 += tmp->h7;
 }
 
- void	print_res_sha512(t_512 *h)
- {
- 	printf("%.16llX%.16llX%.16llX%.16llX%.16llX%.16llX%.16llX%.16llX\n",    (h->h0),
- 									(h->h1),
- 									(h->h2),
- 									(h->h3),
- 									(h->h4),
- 									(h->h5),
- 									(h->h6),
- 									(h->h7)
- 	);
- }
+ // void	print_res_sha512(t_512 *h)
+ // {
+ 	// printf("%.16llX%.16llX%.16llX%.16llX%.16llX%.16llX%.16llX%.16llX\n",    (h->h0),
+ // 									(h->h1),
+ // 									(h->h2),
+ // 									(h->h3),
+ // 									(h->h4),
+ // 									(h->h5),
+ // 									(h->h6),
+ // 									(h->h7)
+ // 	);
+ // }
 
 
 void	main_loop_512(t_info *info, t_512 *h)
@@ -139,5 +139,5 @@ void	main_loop_512(t_info *info, t_512 *h)
 //			printf("%d %u\n",j, mass[j]);
 	}
 //	printf("/////////////////////\n");
-	print_res_sha512(h);
+	// print_res_sha512(h);
 }

@@ -12,7 +12,6 @@
 
 #include "head_ssl.h"
 
-
 void   delete_mass_sha256(t_info *info)
 {
     size_t     i;
@@ -20,7 +19,6 @@ void   delete_mass_sha256(t_info *info)
     i = 0;
     while (i < info->n)
     {
-        printf("%zu\n", i);
 		free(info->mass[i]);
         ++i;
     }

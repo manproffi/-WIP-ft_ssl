@@ -2,6 +2,20 @@
 
 #define ULLI unsigned long long int
 
+void delete_mass_sha512(t_info *info)
+{
+	size_t     i;
+
+    i = 0;
+    while (i < info->n)
+    {
+		free(info->mass_512[i]);
+        ++i;
+    }
+    free(info->mass_512);
+    info->mass = NULL;
+}
+
 static void	initialization_h_num(t_512 *rhs)
 {
 	rhs->h0 = 0x6a09e667f3bcc908;
@@ -104,6 +118,8 @@ void    sha512_algo(t_info *info, const char *string, const char *filename)
 	initialization_k(info);
 
 	main_loop_512(info, &h_num);
+	print_res_sha512(info, string, filename, &h_num);
+	delete_mass_sha512(info);
 
 
 

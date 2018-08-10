@@ -52,7 +52,7 @@ static void	print_3(t_info *info, t_h *h, const char *filename, const char *str)
 {
 	if ((info->flags & 32) == 32)
 	{
-		printf("MD5 (\"%s\") = %.8x%.8x%.8x%.8x%.8x%.8x%.8x%.8x\n", filename,
+		printf("sha256 (\"%s\") = %.8x%.8x%.8x%.8x%.8x%.8x%.8x%.8x\n", filename,
 											    h->h0,
 												h->h1,
 												h->h2,
@@ -65,7 +65,7 @@ static void	print_3(t_info *info, t_h *h, const char *filename, const char *str)
 	}
 	else
 	{
-		printf("MD5 (\"%s\") = %.8x%.8x%.8x%.8x%.8x%.8x%.8x%.8x\n", str,
+		printf("sha256 (\"%s\") = %.8x%.8x%.8x%.8x%.8x%.8x%.8x%.8x\n", str,
 		h->h0, h->h1, h->h2, h->h3, h->h4, h->h5, h->h6, h->h7);
 	}
 }

@@ -121,6 +121,7 @@ void    fill_content(int argc, const char *argv[], t_info *info);
 void    choice_alg_fun(t_info *info, const char *string, const char *filename);
 void    print_res_sha256(t_info *info, const char *str,  const char *filename, t_h *h);
 void    sha512_algo(t_info *info, const char *string, const char *filename);
+void    print_res_sha512(t_info *info, const char *str,  const char *filename, t_512 *h);
 
 
 void	lstaddend(t_flags **alst, t_flags *new);

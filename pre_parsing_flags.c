@@ -60,6 +60,8 @@ void    prepare_s(t_info *info, const char *argv[], int argc)
     }
     else
     {
+        info->flags = (info->flags | 8);
+        
         printf("ft_ssl %s: option requires an argument --s\n", argv[1]);
 		printf("usage: ./ft_ssl %s [-rqp] [-s string] [files...]\n", argv[1]);
 //        exit (1);
