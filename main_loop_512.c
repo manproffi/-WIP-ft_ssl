@@ -1,24 +1,6 @@
 #include "head_ssl.h"
 #define ULLI unsigned long long int
 
-
-
-
-// void	print_res_sha512_debug(t_512 *h)
-// {
-// 	printf("%.8llx %.8llx %.8llx %.8llx %.8llx %.8llx %.8llx %.8llx\n",    (h->h0),
-// 		   (h->h1),
-// 		   (h->h2),
-// 		   (h->h3),
-// 		   (h->h4),
-// 		   (h->h5),
-// 		   (h->h6),
-// 		   (h->h7)
-// 	);
-// }
-
-
-
 void	prepare_message_schedule_512(t_info *info, ULLI m[], int n)
 {
 	int 	i;
@@ -27,7 +9,6 @@ void	prepare_message_schedule_512(t_info *info, ULLI m[], int n)
 	while (++i < 16)
 	{
 		m[i] = rev_bit_512(info->mass_512[n - 1][i]);
-		// printf("i = %d %08x\n",i, m[i]);
 	}
 	while (i < 80)
 	{
@@ -38,30 +19,23 @@ void	prepare_message_schedule_512(t_info *info, ULLI m[], int n)
 
 void	initializ_tmp_512(t_512 * tmp, t_512 *start)
 {
-	tmp->h0 = (start->h0);	//	a
-	tmp->h1 = (start->h1);	//	b
-	tmp->h2 = (start->h2);	//	c
-	tmp->h3 = (start->h3);	//	d
-	tmp->h4 = (start->h4);	//	e
-	tmp->h5 = (start->h5);	//	f
-	tmp->h6 = (start->h6);	//	g
-	tmp->h7 = (start->h7);	//	h
-	
-		// print_debug(start);
-	// sleep(32);
+	tmp->h0 = (start->h0);
+	tmp->h1 = (start->h1);
+	tmp->h2 = (start->h2);
+	tmp->h3 = (start->h3);
+	tmp->h4 = (start->h4);
+	tmp->h5 = (start->h5);
+	tmp->h6 = (start->h6);
+	tmp->h7 = (start->h7);
 }
 ULLI internal_loop_part_512(t_512 *tmp, ULLI m[], t_info *info, int i)
 {
 	ULLI temp1;
 
 	temp1 = (tmp->h7) + sigma1_64(tmp->h4);
-//	temp1 = (ULLI)fmod(temp1, 18446744073709551615.0);
 	temp1 += ch_64(tmp->h4, tmp->h5, tmp->h6);
-//	temp1 = (ULLI)fmod(temp1, 18446744073709551615.0);
 	temp1 += m[i];
-//	temp1 = (ULLI)fmod(temp1, 18446744073709551615.0);
 	temp1 += info->k[i];
-//	temp1 = (ULLI)fmod(temp1, 18446744073709551615.0);
 	return (temp1);
 }
 
@@ -70,26 +44,20 @@ void	internal_loop_512(t_512 *tmp, ULLI m[], t_info *info)
 	int 	i;
 	ULLI temp1;
 	ULLI temp2;
-	ULLI temporary;
 
 	i = -1;
 	while (++i < 80)
 	{
 		temp1 = internal_loop_part_512(tmp, m, info, i);
-//		printf(">>>%llX\n", temp1);
 		temp2 = (sigma0_64(tmp->h0)) + (maj_64(tmp->h0, tmp->h1, tmp->h2));
-//		temp2 = (ULLI)fmod(temporary, 18446744073709551615.0);
 		tmp->h7 = 	(tmp->h6);
 		tmp->h6 = 	(tmp->h5);
 		tmp->h5 = 	(tmp->h4);
 		tmp->h4 = (tmp->h3) + temp1;
-//		tmp->h4 = 	(ULLI)fmod(temporary, 18446744073709551615.0);
 		tmp->h3 = 	(tmp->h2);
 		tmp->h2 = 	(tmp->h1);
 		tmp->h1 = 	(tmp->h0);
 		tmp->h0 = (temp1 + temp2);
-//		tmp->h0 = (ULLI)fmod(temporary, 18446744073709551615.0);
-//		print_res_sha512_debug(tmp);
 	}
 }
 
@@ -105,20 +73,6 @@ void	intermediate_512(t_512 * tmp, t_512 *start)
 	start->h7 += tmp->h7;
 }
 
- // void	print_res_sha512(t_512 *h)
- // {
- 	// printf("%.16llX%.16llX%.16llX%.16llX%.16llX%.16llX%.16llX%.16llX\n",    (h->h0),
- // 									(h->h1),
- // 									(h->h2),
- // 									(h->h3),
- // 									(h->h4),
- // 									(h->h5),
- // 									(h->h6),
- // 									(h->h7)
- // 	);
- // }
-
-
 void	main_loop_512(t_info *info, t_512 *h)
 {
 	size_t 	i;
@@ -132,12 +86,5 @@ void	main_loop_512(t_info *info, t_512 *h)
 		initializ_tmp_512(&tmp, h);
 		internal_loop_512(&tmp, mass, info);
 		intermediate_512(&tmp, h);
-
-
-//		int j = -1;
-//		while (++j < 64)
-//			printf("%d %u\n",j, mass[j]);
 	}
-//	printf("/////////////////////\n");
-	// print_res_sha512(h);
 }

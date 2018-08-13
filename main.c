@@ -22,13 +22,7 @@ void	initialization_info(t_info *info)
     info->keys = 0;
     info->n = 0;
     info->validation_flag = 1;
-
-    info->a = 0x67452301;
-    info->b = 0xEFCDAB89;
-    info->c = 0x98BADCFE;
-    info->d = 0x10325476;
 }
-
 
 int main(int argc, char const *argv[])
 {
@@ -50,13 +44,5 @@ int main(int argc, char const *argv[])
         printf("Message Digest commands:\nmd5\nsha256\n");
     }
     // system("leaks ft_ssl -q");
-    // printf("%f\n", fmod(4.99999990, 2));
-    // printf("%d\n", (int)fmod(4.99999990, 2));
-    // unsigned char a = 250;
-    // unsigned char b = 125;
-    // unsigned char c = a + b;
-    // printf("%d\n", c);
-    // printf("%f\n", fmod(375,256));
-    		
 	return 0;
 }

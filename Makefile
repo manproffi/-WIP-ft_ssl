@@ -42,11 +42,15 @@ SRC = main.c \
 		sha512_algo.c \
 		append_padding_bits_512.c \
 		main_loop_512.c fun_512.c \
-		print_res_sha512.c
+		print_res_sha512.c \
+		blocks_md5.c \
+		initialization_h_md5.c \
+		fun_256_1.c \
+		fun_512_1.c 
  
 OBJ = $(SRC:.c=.o)
 
-#FLAG = -Wall -Wextra -Werror
+FLAG = -Wall -Wextra -Werror
 
 all:	$(NAME)
 

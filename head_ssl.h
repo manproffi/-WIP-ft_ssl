@@ -22,26 +22,6 @@
 #include <stdio.h> //delete
 
 #define ULLI unsigned long long int
-//
-//typedef struct      s_block
-//{
-//    int             b0;
-//    int             b1;
-//    int             b2;
-//    int             b3;
-//    int             b4;
-//    int             b5;
-//    int             b6;
-//    int             b7;
-//    int             b8;
-//    int             b9;
-//    int             b10;
-//    int             b11;
-//    int             b12;
-//    int             b13;
-//    int             b14;
-//    int             b15;
-//}                   t_block;
 
 typedef struct      s_512
 {
@@ -104,9 +84,6 @@ typedef struct 		s_info
     struct s_flags  *new_flags;
 }					t_info;
 
-//void	parsing_flags(int argc, const char *argv[], t_info *info);
-//void    start_work_with_md5(t_info *info, int argc, const char *argv[]);
-//void    start_work_with_sha256(t_info *info, int argc, const char *argv[]);
 void    md5_algo(t_info *info, const char *string, const char *filename);
 void    sha256_algo(t_info *info, const char *string, const char *filename);
 void    append_padding_bits(t_info *info, const char *string);
@@ -150,6 +127,15 @@ unsigned int    sigma1(unsigned int x);
 unsigned int    delta0(unsigned int x);
 unsigned int    delta1(unsigned int x);
 
+void	block1_md5(t_info *info, t_h *h, int i);
+void	block2_md5(t_info *info, t_h *h, int i);
+void	block3_md5(t_info *info, t_h *h, int i);
+void	block4_md5(t_info *info, t_h *h, int i);
+
+void	initialization_tmp_md5(t_h *tmp, t_h *start);
+void	initialization_h_md5(t_h *rhs);
+void	intermediate_md5(t_h *tmp, t_h *start);
+
 ULLI    rotr_64(ULLI  x, int n);
 ULLI    shr_64(ULLI  x, int n);
 ULLI    ch_64(ULLI  x, ULLI  y, ULLI  z);
@@ -158,7 +144,7 @@ ULLI    sigma0_64(ULLI x);
 ULLI    sigma1_64(ULLI x);
 ULLI    delta0_64(ULLI x);
 ULLI    delta1_64(ULLI x);
-ULLI rev_bit_512(ULLI a);
+ULLI	rev_bit_512(ULLI a);
 
 
 

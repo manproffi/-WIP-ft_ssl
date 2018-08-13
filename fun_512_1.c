@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   start_work_with_md5.c                              :+:      :+:    :+:   */
+/*   fun_512_1.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sprotsen <sprotsen@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/14 13:12:11 by sprotsen          #+#    #+#             */
-/*   Updated: 2018/07/14 13:12:13 by sprotsen         ###   ########.fr       */
+/*   Created: 2018/08/13 21:29:56 by sprotsen          #+#    #+#             */
+/*   Updated: 2018/08/13 21:29:57 by sprotsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "head_ssl.h"
+#define ULLI unsigned long long int
 
-void    start_work_with_md5(t_info *info, int argc, const char *argv[])
+ULLI	sigma0_64(ULLI x)
 {
-    (void)info;
-    (void)argc;
-    (void)argv;
+	return (rotr_64(x, 28) ^ rotr_64(x, 34) ^ rotr_64(x, 39));
+}
 
-    pre_parsing_flags(argc, argv, info);
-//    system("leaks ft_ssl -q");
-    fill_content(argc, argv, info);
-//    system("leaks ft_ssl -q");
+ULLI	sigma1_64(ULLI x)
+{
+	return (rotr_64(x, 14) ^ rotr_64(x, 18) ^ rotr_64(x, 41));
+}
 
+ULLI	delta0_64(ULLI x)
+{
+	return (rotr_64(x, 1) ^ rotr_64(x, 8) ^ shr_64(x, 7));
+}
+
+ULLI	delta1_64(ULLI x)
+{
+	return (rotr_64(x, 19) ^ rotr_64(x, 61) ^ shr_64(x, 6));
 }
