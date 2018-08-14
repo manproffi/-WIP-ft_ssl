@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   choice_algorithm_function.c                        :+:      :+:    :+:   */
+/*   delete_mass_sha512.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sprotsen <sprotsen@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/05 14:40:09 by sprotsen          #+#    #+#             */
-/*   Updated: 2018/08/13 20:32:02 by sprotsen         ###   ########.fr       */
+/*   Created: 2018/08/14 22:33:45 by sprotsen          #+#    #+#             */
+/*   Updated: 2018/08/14 22:33:47 by sprotsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "head_ssl.h"
 
-void	choice_alg_fun(t_info *info, const char *string, const char *filename)
+void	delete_mass_sha512(t_info *info)
 {
-	if (ft_strcmp(info->algo_name, "md5") == 0)
-		md5_algo(info, string, filename);
-	else if (ft_strcmp(info->algo_name, "sha256") == 0)
-		sha256_algo(info, string, filename);
-	else if (ft_strcmp(info->algo_name, "sha512") == 0)
-		sha512_algo(info, string, filename);
-	else
-		ft_printf("ERROR::choice_alg_fun\n");
+	size_t	i;
+
+	i = 0;
+	while (i < info->n)
+	{
+		free(info->mass_512[i]);
+		++i;
+	}
+	free(info->mass_512);
+	info->mass = NULL;
 }

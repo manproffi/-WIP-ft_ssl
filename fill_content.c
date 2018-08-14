@@ -30,7 +30,7 @@ void	fill_key(t_info *info)
 		else if (tmp->key == 'f')
 			info->flags = (info->flags | 16);
 		else
-			printf("Error::fill_content\n");
+			ft_printf("Error::fill_content\n");
 		tmp = tmp->next;
 	}
 }

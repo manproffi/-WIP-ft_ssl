@@ -6,29 +6,29 @@
 /*   By: sprotsen <sprotsen@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/05 15:16:12 by sprotsen          #+#    #+#             */
-/*   Updated: 2018/08/05 15:16:13 by sprotsen         ###   ########.fr       */
+/*   Updated: 2018/08/14 22:29:08 by sprotsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "head_ssl.h"
 
-void   delete_mass_sha256(t_info *info)
+void		delete_mass_sha256(t_info *info)
 {
-    size_t     i;
+	size_t	i;
 
-    i = 0;
-    while (i < info->n)
-    {
+	i = 0;
+	while (i < info->n)
+	{
 		free(info->mass[i]);
-        ++i;
-    }
-    free(info->mass);
-    info->mass = NULL;
+		++i;
+	}
+	free(info->mass);
+	info->mass = NULL;
 }
 
 static void	initialization_t(t_info *info)
 {
-	static unsigned int k[] = {
+	static unsigned int	k[] = {
 		0x428a2f98, 0x71374491, 0xb5c0fbcf, 0xe9b5dba5, 0x3956c25b,
 		0x59f111f1, 0x923f82a4, 0xab1c5ed5,
 		0xd807aa98, 0x12835b01, 0x243185be, 0x550c7dc3, 0x72be5d74,
@@ -45,11 +45,11 @@ static void	initialization_t(t_info *info)
 		0x4ed8aa4a, 0x5b9cca4f, 0x682e6ff3,
 		0x748f82ee, 0x78a5636f, 0x84c87814, 0x8cc70208, 0x90befffa,
 		0xa4506ceb, 0xbef9a3f7, 0xc67178f2 };
-    int              i;
+	int					i;
 
-    i = -1;
-    while (++i < 64)
-        info->t[i] = k[i];
+	i = -1;
+	while (++i < 64)
+		info->t[i] = k[i];
 }
 
 static void	initialization_h_num(t_h *rhs)
@@ -64,38 +64,14 @@ static void	initialization_h_num(t_h *rhs)
 	rhs->h7 = 0x5be0cd19;
 }
 
-void    sha256_algo(t_info *info, const char *string, const char *filename)
+void		sha256_algo(t_info *info, const char *string, const char *filename)
 {
-    t_h 	h_num;
+	t_h		h_num;
 
 	initialization_h_num(&h_num);
 	append_padding_bits_256(info, string);
-    initialization_t(info);
-
-    // (void)filename;
-
-
+	initialization_t(info);
 	main_loop(info, &h_num);
-
 	print_res_sha256(info, string, filename, &h_num);
 	delete_mass_sha256(info);
-
-
-
-
-	///******* debug *******///
-	// printf("string: %s\n", string);
- //    int k = -1;
- //    while (++k < info->n)
- //    {
- //        int i = -1;
- //        while (++i < 16)
- //        {
- //            unsigned char *str = (unsigned char*)&(info)->mass[k][i];
- //            printf("%02x%02x%02x%02x\n", str[0], str[1], str[2], str[3]);
- //        }
- //    }
-
-
-
 }
