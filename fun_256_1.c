@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fun.c                                              :+:      :+:    :+:   */
+/*   fun_256_1.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sprotsen <sprotsen@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/15 17:16:43 by sprotsen          #+#    #+#             */
-/*   Updated: 2018/08/13 21:21:37 by sprotsen         ###   ########.fr       */
+/*   Created: 2018/08/13 21:26:43 by sprotsen          #+#    #+#             */
+/*   Updated: 2018/08/13 21:28:21 by sprotsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "head_ssl.h"
 
-unsigned int	fun_f(unsigned int x, unsigned int y, unsigned int z)
+unsigned int	sigma0(unsigned int x)
 {
-	return ((x & y) | ((~x) & z));
+	return (rotr(x, 2) ^ rotr(x, 13) ^ rotr(x, 22));
 }
 
-unsigned int	fun_g(unsigned int x, unsigned int y, unsigned int z)
+unsigned int	sigma1(unsigned int x)
 {
-	return ((x & z) | (y & ~z));
+	return (rotr(x, 6) ^ rotr(x, 11) ^ rotr(x, 25));
 }
 
-unsigned int	fun_h(unsigned int x, unsigned int y, unsigned int z)
+unsigned int	delta0(unsigned int x)
 {
-	return (x ^ y ^ z);
+	return (rotr(x, 7) ^ rotr(x, 18) ^ shr(x, 3));
 }
 
-unsigned int	fun_i(unsigned int x, unsigned int y, unsigned int z)
+unsigned int	delta1(unsigned int x)
 {
-	return (y ^ (x | ~z));
+	return (rotr(x, 17) ^ rotr(x, 19) ^ shr(x, 10));
 }

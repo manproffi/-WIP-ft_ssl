@@ -1,20 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sha512_algo.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sprotsen <sprotsen@student.unit.ua>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/08/14 22:31:48 by sprotsen          #+#    #+#             */
+/*   Updated: 2018/08/14 22:31:50 by sprotsen         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "head_ssl.h"
 
 #define ULLI unsigned long long int
-
-void delete_mass_sha512(t_info *info)
-{
-	size_t     i;
-
-    i = 0;
-    while (i < info->n)
-    {
-		free(info->mass_512[i]);
-        ++i;
-    }
-    free(info->mass_512);
-    info->mass = NULL;
-}
 
 static void	initialization_h_num(t_512 *rhs)
 {
@@ -39,12 +37,11 @@ static void	initialization_k_part3(t_info *info, int i)
 		0x28db77f523047d84, 0x32caab7b40c72493,
 		0x3c9ebe0a15c9bebc, 0x431d67c49c100d4c,
 		0x4cc5d4becb3e42b6, 0x597f299cfc657e2a,
-		0x5fcb6fab3ad6faec, 0x6c44198c4a475817
-	};
+		0x5fcb6fab3ad6faec, 0x6c44198c4a475817};
+
 	while (++i < 80)
 	{
-        info->k[i] = k_third_part[i - 62];
-//		printf(">>>+++%d %llx\n", i, info->k[i]);
+		info->k[i] = k_third_part[i - 62];
 	}
 }
 
@@ -71,15 +68,13 @@ static void	initialization_k_part2(t_info *info, int i)
 	while (++i < 62)
 	{
 		info->k[i] = k_second_part[i - 32];
-//		printf(">>> +++ %d %llx\n", i, info->k[i]);
 	}
-
 	initialization_k_part3(info, i - 1);
 }
 
-static void initialization_k(t_info *info)
+static void	initialization_k(t_info *info)
 {
-	static const ULLI k_first_part[32] = {
+	static const ULLI	k_first_part[32] = {
 		0x428a2f98d728ae22, 0x7137449123ef65cd,
 		0xb5c0fbcfec4d3b2f, 0xe9b5dba58189dbbc,
 		0x3956c25bf348b538, 0x59f111f1b605d019,
@@ -95,49 +90,23 @@ static void initialization_k(t_info *info)
 		0x983e5152ee66dfab, 0xa831c66d2db43210,
 		0xb00327c898fb213f, 0xbf597fc7beef0ee4,
 		0xc6e00bf33da88fc2, 0xd5a79147930aa725,
-		0x06ca6351e003826f, 0x142929670a0e6e70
-	};
-	int		i;
+		0x06ca6351e003826f, 0x142929670a0e6e70};
+	int					i;
 
-    i = -1;
-    while (++i < 32)
-	{
+	i = -1;
+	while (++i < 32)
 		info->k[i] = k_first_part[i];
-//		printf(">>>%d %llx\n", i, info->k[i]);
-	}
-    initialization_k_part2(info, i - 1);
+	initialization_k_part2(info, i - 1);
 }
 
-
-void    sha512_algo(t_info *info, const char *string, const char *filename)
+void		sha512_algo(t_info *info, const char *string, const char *filename)
 {
-	t_512 h_num;
+	t_512	h_num;
 
 	initialization_h_num(&h_num);
 	append_padding_bits_512(info, string);
 	initialization_k(info);
-
 	main_loop_512(info, &h_num);
-	print_res_sha512(info, string, filename, &h_num);
+	p_r_sha512(info, string, filename, &h_num);
 	delete_mass_sha512(info);
-
-
-
-//	///******* debug *******///
-//	printf("string: %s\n", string);
-//    int k = -1;
-//    while (++k < info->n)
-//    {
-//        int i = -1;
-//        while (++i < 16)
-//        {
-//            unsigned char *str = (unsigned char*)&(info)->mass_512[k][i];
-//            printf("%02x%02x%02x%02x%02x%02x%02x%02x\n", str[0], str[1], str[2], str[3],
-//            	str[4], str[5], str[6], str[7]);
-//        }
-//    }
-
-//	int j = -1;
-//	while (++j < 80)
-//		printf("****%llu\n", info->k[j]);
 }

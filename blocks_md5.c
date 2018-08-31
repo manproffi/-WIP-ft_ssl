@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fun.c                                              :+:      :+:    :+:   */
+/*   blocks_md5.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sprotsen <sprotsen@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/15 17:16:43 by sprotsen          #+#    #+#             */
-/*   Updated: 2018/08/13 21:21:37 by sprotsen         ###   ########.fr       */
+/*   Created: 2018/08/13 19:56:46 by sprotsen          #+#    #+#             */
+/*   Updated: 2018/08/13 20:13:24 by sprotsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "head_ssl.h"
+#define UINT unsigned int
 
-unsigned int	fun_f(unsigned int x, unsigned int y, unsigned int z)
+int		p1(UINT arr[], UINT a, UINT b, UINT c)
 {
-	return ((x & y) | ((~x) & z));
+	arr[0] = a;
+	arr[1] = b;
+	arr[2] = c;
+	return (1);
 }
 
-unsigned int	fun_g(unsigned int x, unsigned int y, unsigned int z)
+int		p2(UINT arr[], UINT d)
 {
-	return ((x & z) | (y & ~z));
-}
-
-unsigned int	fun_h(unsigned int x, unsigned int y, unsigned int z)
-{
-	return (x ^ y ^ z);
-}
-
-unsigned int	fun_i(unsigned int x, unsigned int y, unsigned int z)
-{
-	return (y ^ (x | ~z));
+	arr[3] = d;
+	return (1);
 }

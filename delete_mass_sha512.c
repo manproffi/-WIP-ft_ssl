@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fun.c                                              :+:      :+:    :+:   */
+/*   delete_mass_sha512.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sprotsen <sprotsen@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/15 17:16:43 by sprotsen          #+#    #+#             */
-/*   Updated: 2018/08/13 21:21:37 by sprotsen         ###   ########.fr       */
+/*   Created: 2018/08/14 22:33:45 by sprotsen          #+#    #+#             */
+/*   Updated: 2018/08/14 22:33:47 by sprotsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "head_ssl.h"
 
-unsigned int	fun_f(unsigned int x, unsigned int y, unsigned int z)
+void	delete_mass_sha512(t_info *info)
 {
-	return ((x & y) | ((~x) & z));
-}
+	size_t	i;
 
-unsigned int	fun_g(unsigned int x, unsigned int y, unsigned int z)
-{
-	return ((x & z) | (y & ~z));
-}
-
-unsigned int	fun_h(unsigned int x, unsigned int y, unsigned int z)
-{
-	return (x ^ y ^ z);
-}
-
-unsigned int	fun_i(unsigned int x, unsigned int y, unsigned int z)
-{
-	return (y ^ (x | ~z));
+	i = 0;
+	while (i < info->n)
+	{
+		free(info->mass_512[i]);
+		++i;
+	}
+	free(info->mass_512);
+	info->mass = NULL;
 }

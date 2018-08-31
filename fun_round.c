@@ -6,34 +6,34 @@
 /*   By: sprotsen <sprotsen@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/16 20:26:53 by sprotsen          #+#    #+#             */
-/*   Updated: 2018/07/16 20:26:54 by sprotsen         ###   ########.fr       */
+/*   Updated: 2018/08/14 20:25:05 by sprotsen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "head_ssl.h"
+#define UINT unsigned int
 
-unsigned int rol(unsigned int a, unsigned int offset)
+UINT	rol(UINT a, UINT offset)
 {
-    return a << offset | a >> (32 - offset);
+	return (a << offset | a >> (32 - offset));
 }
 
-
-void    fun_r1(unsigned int *a, unsigned int b, unsigned int c, unsigned int d, unsigned int x, unsigned int s, unsigned int i, t_info *info)
+UINT	fun_r1(UINT arr[], UINT x, UINT s, UINT k)
 {
-    *a = b + (rol(*a + fun_f(b,c,d) + x + info->t[i], s));
+	return (arr[1] + (rol(arr[0] + fun_f(arr[1], arr[2], arr[3]) + x + k, s)));
 }
 
-void    fun_r2(unsigned int *a, unsigned int b, unsigned int c, unsigned int d, unsigned int x, unsigned int s, unsigned int i, t_info *info)
+UINT	fun_r2(UINT arr[], UINT x, UINT s, UINT k)
 {
-    *a = b + (rol(*a + fun_g(b,c,d) + x + info->t[i], s));
+	return (arr[1] + (rol(arr[0] + fun_g(arr[1], arr[2], arr[3]) + x + k, s)));
 }
 
-void    fun_r3(unsigned int *a, unsigned int b, unsigned int c, unsigned int d, unsigned int x, unsigned int s, unsigned int i, t_info *info)
+UINT	fun_r3(UINT arr[], UINT x, UINT s, UINT k)
 {
-    *a = b + (rol(*a + fun_h(b,c,d) + x + info->t[i], s));
+	return (arr[1] + (rol(arr[0] + fun_h(arr[1], arr[2], arr[3]) + x + k, s)));
 }
 
-void    fun_r4(unsigned int *a, unsigned int b, unsigned int c, unsigned int d, unsigned int x, unsigned int s, unsigned int i, t_info *info)
+UINT	fun_r4(UINT arr[], UINT x, UINT s, UINT k)
 {
-    *a = b + (rol(*a + fun_i(b,c,d) + x + info->t[i], s));
+	return (arr[1] + (rol(arr[0] + fun_i(arr[1], arr[2], arr[3]) + x + k, s)));
 }
